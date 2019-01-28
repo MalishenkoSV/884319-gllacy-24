@@ -47,6 +47,7 @@
     <section class="ices-catalog">
       <h2>Сливочное мороженое</h2>
         <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
          <legend>Фильтр</legend>
           <div class="filter">
             <label for="select"><p>Сортировка:</p></label>
@@ -69,20 +70,23 @@
               <input type="radio" name="fat" value="30-100">выше 30%
             </label>
           </div> 
-          <p>Наполнители:</p>
-          <div class="filter">
-            <input type="checkbox" name="chocolate" id="chocolate" checked>
-            <label for="chocolate">шоколадные</label>
-            <input type="checkbox" name="sugar" id="sugar" checked>
-            <label for="sugar">сахарные присыпки</label>
-            <input type="checkbox" name="fruits" id="fruits">
-            <label for="fruits">фрукты</label>
-            <input type="checkbox" name="syrups" id="syrups">
-            <label for="syrups">сиропы</label>
-            <input type="checkbox" name="jams" id="jams">
-            <label for="jams">джемы</label>
-          </div>
-          <button type="button" class="btn btn-variety">Применить</button>
+          </fieldset>
+          <fieldset>
+            <p>Наполнители:</p>
+            <div class="filter">
+              <input type="checkbox" name="chocolate" id="chocolate" checked>
+              <label for="chocolate">шоколадные</label>
+              <input type="checkbox" name="sugar" id="sugar" checked>
+              <label for="sugar">сахарные присыпки</label>
+              <input type="checkbox" name="fruits" id="fruits">
+              <label for="fruits">фрукты</label>
+              <input type="checkbox" name="syrups" id="syrups">
+              <label for="syrups">сиропы</label>
+              <input type="checkbox" name="jams" id="jams">
+              <label for="jams">джемы</label>
+            </div>
+            <button type="button" class="btn btn-variety">Применить</button>
+          </fieldset>
         </form>
       <ul>
         <li>
