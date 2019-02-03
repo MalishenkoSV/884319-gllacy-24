@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="header-main">
-      <a class="main-header-logo" href="#">
+      <a class="main-header-logo">
         <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глейси»">
       </a>
       <div class="main-navigation-groop">
@@ -28,40 +28,27 @@
         </nav>
           <ul class="user-navigation">
             <li><a href="#">Найти</a>
-              <input type="search" placeholder="Что ищем?">
+              <div>
+                <form class="search" method="post" action="https://echo.htmlacademy.ru">
+                  <label class="visually-hidden" for="search">Поиск по сайту</label>
+                  <input type="search" id="search" name="search-input" placeholder="Что ищем?">
+                </form>
+              </div>
             </li>
             <li class="login-link"><a href="#" aria-label="Переход на страницу личного кабинета">Вход</a>
-              <form action="https://echo.htmlacademy.ru" method="post">
-                <input type="text" name="e-mail" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
-                <button>Войти</button>
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
+              <div>
+                <form action="https://echo.htmlacademy.ru" method="post">
+                  <label class="visually-hidden" for="e-mail">Электронная почта</label>
+                  <input type="text" id="e-mail" name="e-mail" placeholder="Электронная почта">
+                  <label class="visually-hidden" for="password">Пароль пользователя</label>
+                  <input type="password" name="password-user" id="password" placeholder="Пароль">
+                  <button class="btn" type="submit">Войти</button>
+                  <a href="#" aria-label="">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
               </form>
+              </div>
               </li>
             <li><a href="#">Пусто</a></li>
-            <li><a href="#">2 товара</a>
-              <form action="https://echo.htmlacademy.ru" method="post">
-                <table border="1">
-                  <tr>
-                    <td>х</td>
-                    <td><img src="img/Мороженко 1k.png" width="33" height="33"></td>
-                    <td>Пломбир с апельсиновым джемом</td>
-                    <td>1,5 кг*200 руб.</td>
-                    <td>300руб.</td>
-                  </tr>
-                  <tr>
-                    <td>x</td>
-                    <td><img src="img/Мороженко 2k.png" width="33" height="33"></td>
-                    <td>Клубничный пломбир с присыпкой  из белого шоколада</td>
-                    <td>1,5 кг*300 руб.</td>
-                    <td>450руб.</td>
-                  </tr>
-                  <caption>Итого:750р.</caption>
-                </table>
-                <button>Оформить заказ</button>
-              </form>
-            </li>
             </li>
           </ul>
       </div>
@@ -72,7 +59,7 @@
     <main>
       <h1 class="visually-hidden"> Магазин мороженного "Глейси"</h1>
       <section class="slider">
-          <a href="#" class="btn btn-info">Давайте оба!</a>
+          <a class="btn btn-info">Давайте оба!</a>
         <h2 class="visually-hidden">Слайдер мороженого</h2>
         <div class="slider">
           <input type="radio" id="btn-1" name="toggle" checked>
@@ -86,7 +73,7 @@
         </div>
         <div class="photoslider-item">
           <p>Крем-брюле и пломбиp с малиновым джемом</p>
-          <img src="img/Мороженко 1.png" width="1045" height="881" alt="Фото мороженного крем-брюле и пломбир с малиновым джемом»">
+          <img src="img/ice-cream 1.png" width="1045" height="881" alt="Фото мороженного крем-брюле и пломбир с малиновым джемом»">
         </div>
       </section>
       <section class="advertising">
@@ -148,7 +135,7 @@
         </article>
         <section class="form">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-          /* Тут будет форма*/
+          <form></form>
         </section>
       </div>
       <section class="map">
@@ -159,12 +146,23 @@
             и офлайн-магазина:</p>
         <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
         <p>Для заказов по телефону:</p>
-        <a href="">8 812 450-25-25</a>
+        <a href="#">8 812 450-25-25</a>
         <p>(с 10 до 20 ежедневно)</p>
-        <a href="#">Форма обратной связи</a>
-      </section>
+        <a class="btn" href="#">Форма обратной связи</a>
+        </section>
+        <div class="feedback">
+          <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="name">Имя пользователя</label>
+            <input type="text" name="name-user" id="name" placeholder="Как Вас зовут?">
+            <label class="visually-hidden" for="mail-feedback">Электронная почта клиента</label>
+            <input type="text" name="e-mail" id="mail-feedback" placeholder="Ваша почта для ответа?">
+            <label for="comment-field">Ваши коментарии</label>
+            <textarea class="visually-hidden" name="comment" id="comment-field" rows="10">Напишите что-нибудь...
+            </textarea>
+            <button  class="btn" type="submit"></button>
+          </form>
+        </div>
     </main>
-    /*тут будет попап*/
     <footer class="main-footer">
       <ul class="footer-social">
         <li><a class="social-btn" href="#"><img src="#" width="" height="" alt="Твиттер"></a></li>

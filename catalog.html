@@ -26,7 +26,30 @@
               <ul class="user-navigation">
                 <li><a href="#">Найти</a></li>
                 <li class="login-link"><a href="#" aria-label="Переход на страницу личного кабинета">Вход</a></li>
-                <li><a href="#">2 товара</a></li>
+                <li><a href="#">2 товара</a>
+                  <form action="https://echo.htmlacademy.ru" method="post">
+                    <table>
+                      <tr>
+                        <td><button>x</button></td>
+                        <td><img src="img/ice-1k.png" width="33" height="33"></td>
+                        <td>  Пломбир с апельсиновым джемом</td>
+                        <td>  1,5 кг x 200 руб.</td>
+                        <td>  300 руб.</td>
+                      </tr>
+                      <tr>
+                        <td><button>x</button></td>
+                        <td><img src="img/ice-2k.png" width="33" height="33"></td>
+                        <td> Клубничный пломбир с присыпкой  из белого шоколада</td>
+                        <td> 1,5 кг x 300 руб. </td>
+                        <td>  450 руб. </td>
+                      </tr>
+                      <b>  Итого: 750 руб.</b>
+                      <tr>
+                        <td><button class="btn" type="submit">Оформить заказ</button></td>
+                      </tr>
+                    </table>
+                  </form>
+                </li>
               </ul>
             </li>
           </ul>
@@ -48,12 +71,15 @@
       </div>
     <section class="ices-catalog">
       <h2>Сливочное мороженое</h2>
+        <div>
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Сортировка:</legend>
             <select name="sort">
-              <option value="popularity">по популярности</option>
-              <option value=""></option>
+              <option value="popularity" checked>по популярности</option>
+              <option value="first low-cost">сначала недорогие</option>
+              <option value="first cost">сначала дорогие</option>
+              <option value="fat content">по жирности</option>
             </select>
           </fieldset>
           <fieldset>
@@ -84,7 +110,8 @@
               <label for="jams">джемы</label>
           </fieldset>
           <button type="submit" class="btn btn-variety">Применить</button>
-        </form>
+      </form>
+      </div>
       <ul>
         <li>
           <img src="img/1.png" width="267" height="267" alt="Фото сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
@@ -181,10 +208,10 @@
      </div>
      <div class="suppliers">
      <ul>
-       <li><a href="#">Для поставщиков</a></li>
-       <li><a href="#">О производстве</a></li>
-       <li><a href="#">Наши документы</a></li>
-       <li><a href="#">Экологические стандарты</a></li>
+       <li><a href="#"> Для поставщиков</a></li>
+       <li><a href="#"> О производстве</a></li>
+       <li><a href="#"> Наши документы</a></li>
+       <li><a href="#"> Экологические стандарты</a></li>
      </ul>
      </div>
       <div class="footer-copyright">
