@@ -64,6 +64,9 @@ body {
   color : #ffffff;
   background-color : #849d8f;
 }
+a{
+  color : #ffffff;
+}
 .inner-page {
   color : #ffffff;
   linear-gradient();
@@ -74,7 +77,8 @@ body {
 }
 ul .catalog,
 .search,
-.feedback {
+.feedback,
+.form-order {
   display: none;
 }
 
@@ -88,11 +92,21 @@ ul .catalog,
 .pagination-list {
 list-style : none;
 }
-
-a .select,
+.select a,
 .breadcrumbs-list a {
   color : #ffffff;
 }
+/*.main-navigation
+.form-mailing a
+.main-footer a,
+.card-item a,
+.pagination-list a {
+  font-size: 16px;
+  line-height: 18px;
+  color : #ffffff;
+  font-weight :bold;
+}*/
+
 a:hover,a:active {
   color : #deb49a;
 }
@@ -101,25 +115,41 @@ a:hover,a:active {
   font-size: 16px;
   line-height: 18px;
   color : #ffffff;
-  font-weight: 400;
+  font-weight: bold;
 }
+
  .tel{
   font-size : 22px;
   line-height : 24px;
+  color: #ffffff;
+  font-weight : bold;
+  text-decoration : none
 }
 
 .btn {
   text-decoration : none;
   font-size : 18px;
-  line-height : 34px;
-  background-color : #ed5b3d;
+  line-height : 24px;
+  font-weight : bold;
+  background-color : #f16542;
+  color : #ffffff;
+
+}
+
+.btn:hover {
+  background-color : #ef7661;
   color : #ffffff;
 }
 
+.btn:active {
+  background: linear-gradient(to top, #ef7661, #d94d35);
+}
 .btn-info {
   font-size : 32px;
   line-height : 44px;
+  font-weight : bold;
 }
+
  .btn-input {
   font-size : 14px;
   line-height : 16px;
@@ -128,6 +158,11 @@ a:hover,a:active {
 
 .form-nav {
   display : none;
+}
+h3 {
+  font-size : 45px;
+  line-height : 45px;
+  font-weight : bold;
 }
 
 .card-item-hit .btn {
@@ -143,6 +178,7 @@ select,
 .btn-variety {
   background-color : #a9bab0;
   color : #ffffff;
+  font-weight : bold;
 }
 
 .btn-variety:hover {
@@ -156,12 +192,15 @@ select,
 }
 
 .white {
+  font-size : 24px;
+  line-height : 30px;
+  font-weight : bold;
   color : #323232;
   font-weight : medium;
 }
 
 select:hover {
-  font-weight : regular;
+  font-weight : ;
 }
 
 .photoslider-item p {
@@ -191,12 +230,27 @@ h4 {
   background-image : url("../img/hit.svg");
   background-repeat : no-repeat;
   background-position : 0 0;
+  z-index : a;
 }
 
 .card-item {
   padding : 0;
   margin : 0;
+  font-size : 16px;
+  line-height : 22px;
+  font-weight : bold;
   background-color : #849d8f;
+  z-index : ;
+}
+.card-item p {
+  font-size : 45px;
+  line-height : 45px;
+  font-weight : bold;
+}
+.card-item span {
+  font-size : 30px;
+  line-height : 45px;
+  font-weight : bold;
 }
 
 .card-item:hover {
@@ -204,6 +258,9 @@ h4 {
 }
 
 .description li {
+  font-size : 16px;
+  line-height : 22px;
+  font-weight : normal;
   background-repeat : no-repeat;
   background-position : 0 0;
 }
@@ -242,6 +299,11 @@ article {
   background-image : url("../img/strawberry.png");
   background-repeat : no-repeat;
 }
+article p {
+  font-size : 16px;
+  line-height : 22px;
+  font-weight : normal;
+}
 
 .form-mailing {
   background-color : #f8f7f4;
@@ -253,10 +315,19 @@ article {
 .contacts {
 background-color : #fffefe;
 color : #323232;
+font-size : 14px;
+line-height : 20px;
+font-weight : normal;
 }
 
 .contacts a {
   color : #323232;
+}
+
+.contacts b {
+  font-size : 18px;
+  line-height : 24px;
+  font-weight : bold;
 }
 
 social-btn {
@@ -271,10 +342,27 @@ social-btn {
 .footer-social li {
   margin : 5px;
 }
-
 .footer-menu .distributor {
   background-image : url("../img/heart.svg");
   background-repeat : no-repeat;
+}
+
+.footer-menu  {
+  font-size : 13px;
+  line-height : 18px;
+  font-weight : normal;
+}
+
+.footer-copyright {
+  font-size : 12px;
+  line-height : 18px;
+  font-weight: normal;
+
+}
+.user-navigation {
+  font-size : 12px;
+  line-height : 18px;
+  font-weight: normal;
 }
 
 .user-navigation .basket {
@@ -300,4 +388,12 @@ social-btn {
 .user-navigation,
 .footer-menu {
   background-position : 0 0;
+}
+.user-navigation li {
+  background-color : #a1b4a9;
+}
+
+.site-navigation .user-navigation li:hover {
+  background-color : #f8f7f4;
+  color : #323232;
 }
