@@ -5,7 +5,7 @@
   font-weight: 300;
   src: local("Roboto Light"), local("Roboto-Light"),
        url("../fonts/roboto-v18-cyrillic_latin-300.woff2") format("woff2"), /* Super Modern Browsers */
-       url("../fonts/roboto-v18-cyrillic_latin-300.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/roboto-v18-cyrillic_latin-300.woff") format("woff"); /* Modern Browsers */
 }
 /* roboto-300italic - cyrillic_latin */
 @font-face {
@@ -14,7 +14,7 @@
   font-weight: 300;
   src: local("Roboto Light Italic"), local("Roboto-LightItalic"),
        url("../fonts/roboto-v18-cyrillic_latin-300italic.woff2") format("woff2"), /* Super Modern Browsers */
-       url("../fonts/roboto-v18-cyrillic_latin-300italic.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/roboto-v18-cyrillic_latin-300italic.woff") format("woff"); /* Modern Browsers */
       }
 /* roboto-regular - cyrillic_latin */
 @font-face {
@@ -23,7 +23,7 @@
   font-weight: 400;
   src: local("Roboto"), local("Roboto-Regular"),
        url("../fonts/roboto-v18-cyrillic_latin-regular.woff2") format("woff2"), /* Super Modern Browsers */
-       url("../fonts/roboto-v18-cyrillic_latin-regular.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/roboto-v18-cyrillic_latin-regular.woff") format("woff"); /* Modern Browsers */
       }
 /* roboto-italic - cyrillic_latin */
 @font-face {
@@ -32,7 +32,7 @@
   font-weight: 400;
   src: local("Roboto Italic"), local("Roboto-Italic"),
        url("../fonts/roboto-v18-cyrillic_latin-italic.woff2") format("woff2"), /* Super Modern Browsers */
-       url("../fonts/roboto-v18-cyrillic_latin-italic.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/roboto-v18-cyrillic_latin-italic.woff") format("woff"); /* Modern Browsers */
       }
 /* roboto-900 - cyrillic_latin */
 @font-face {
@@ -42,7 +42,7 @@
 
   src: local("Roboto Black"), local("Roboto-Black"),
        url("../fonts/roboto-v18-cyrillic_latin-900.woff2") format("woff2"), /* Super Modern Browsers */
-       url("../fonts/roboto-v18-cyrillic_latin-900.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/roboto-v18-cyrillic_latin-900.woff") format("woff"); /* Modern Browsers */
 }
 /* roboto-900italic - cyrillic_latin */
 @font-face {
@@ -51,19 +51,14 @@
   font-weight: 900;
   src: local("Roboto Black Italic"), local("Roboto-BlackItalic"),
        url("../fonts/roboto-v18-cyrillic_latin-900italic.woff2") format("woff2"), /* Super Modern Browsers */
-       url("../fonts/roboto-v18-cyrillic_latin-900italic.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/roboto-v18-cyrillic_latin-900italic.woff") format("woff"); /* Modern Browsers */
 
 }
-* {
-  outline: 1px solid red;
-}
+
 body {
-  padding: 25px 30px;
-  margin: 0;
+  min-width: 1200px;
+  padding: 0;
   font-family: "Roboto", Arial, sans-serif;
-  width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
@@ -71,9 +66,25 @@ body {
   background-color: #849d8f;
 }
 
-main {
-  margin: 0;
-  padding: 0;
+html {
+  box-sizing: border-box;
+}
+
+img {
+  min-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherid;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
 }
 
 a{
@@ -99,7 +110,6 @@ list-style: none;
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -123,8 +133,6 @@ a:hover,a:active {
 }
 
 .header-main {
-  margin: 0;
-  padding: 0;
   display:flex;
   flex-direction: row;
 }
@@ -162,7 +170,7 @@ a:hover,a:active {
   display:flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-right: 0;
+  margin: 0;
   margin-left: auto;
   padding: 0;
   padding-left: 20px;
@@ -170,7 +178,27 @@ a:hover,a:active {
 
 }
 .user-navigation li {
-  height: 30px;
+  height: 35px;
+}
+
+.basket {
+width: 21px;
+height: 21px;
+}
+
+.basket-red {
+  width: 21px;
+  height: 20px;
+}
+
+.login-link {
+  width: 21px;
+  height: 19px;
+}
+
+.loupe {
+width: 17px;
+height: 17px;
 }
 
 .tel-order {
@@ -194,12 +222,12 @@ font-weight: 700;
 .main-header-logo {
   width: 155px;
   height: 70px;
-  padding-right: 20px;
+  margin-right: 20px;
 
 }
 
 .nav-catalog {
-  padding-right: 30px;
+  margin-right: 30px;
 }
 
  .tel{
@@ -304,22 +332,16 @@ visibility: hidden;
 /*Блок слайдера*/
 .slider {
   height: 900px;
-  margin: 0;
-  padding: 0;
  }
 
  .slider-toggle {
    width: 80px;
-   margin: 0;
-   padding: 0;
    margin-top: 60px;
  }
 
 
 .photoslider-item {
   height: 210px;
-  margin: 0;
-  padding: 0;
 }
 
 .photoslider-item p {
@@ -327,8 +349,6 @@ visibility: hidden;
   line-height: 60px;
   font-weight: 700;
   width: 670px;
-  margin: 0;
-  padding:0;
 }
 /*Блок акции*/
 .raspberry p,
@@ -341,8 +361,6 @@ visibility: hidden;
 .advertising {
   width: 1150px;
   height: 230px;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
@@ -350,8 +368,6 @@ visibility: hidden;
 }
 
 .raspberry {
-  padding: 0;
-  margin: 0;
   margin-right: 25px;
   width: 560px;
   height: 230px;
@@ -361,8 +377,6 @@ visibility: hidden;
 }
 
 .chocolate {
-  padding: 0;
-  margin: 0;
   width: 560px;
   height: 230px;
   background-color: #723e1b;
@@ -373,13 +387,16 @@ visibility: hidden;
 
 
 
-.ice-kind {
-  width: 1155px;
+.ice-kind,
+.ice-catalog {
+  min-width: 1145px;
   height: 330px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+
 
 }
 
@@ -392,20 +409,26 @@ visibility: hidden;
 .card-item {
   margin: 0;
   padding: 0;
-  padding-right: 25px;
+  margin-right: 25px;
   font-size: 16px;
   line-height: 22px;
   width:265px;
   font-weight: 500;
   background-color: #849d8f;
+  position: relative;
 }
 .card-item p {
   font-size: 45px;
   line-height: 45px;
   font-weight: 700;
+  position: absolute;
+  top: 165px;
+  left: 0;
 }
 
 .ice {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -419,13 +442,16 @@ visibility: hidden;
 .card-item:hover {
   background-color: #9bafa3;
 }
+.ice-cream {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
 
 .description li {
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
   width: 500px;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -437,7 +463,7 @@ visibility: hidden;
   display: flex;
 
 }
-.ice-cream {
+.ice-cream-quality {
   background-image: url("../img/ice-cream.svg");
 }
 
@@ -460,8 +486,6 @@ li:hover .btn {
 .shop-description {
   width: 1155px;
   height: 305px;
-  margin: 0;
-  padding: 0;
   margin-bottom: 25px;
   display: inline-block;
   background-color: #ece1c9;
@@ -471,11 +495,11 @@ li:hover .btn {
   background-repeat: repeat;
 }
 /*Новости*/
-.container {
-width: 1155px;
-display: flex;
-justify-content: space-between;
-margin-bottom: 25px;
+.container-news {
+  width: 1155px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .news {
@@ -503,27 +527,37 @@ margin-bottom: 25px;
 }
 /*Карта*/
 .map {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content:center;
   margin-bottom: 30px;
   height: 430px;
   width: 1200px;
+
 }
-.map-container {
+.map img {
+  margin: 0 auto;
+  display: block;
+  width: 1200px;
+  height: 430px;
+}
+
+.contacts-container {
+  width: 305px;
+  height: 305px;
   position: relative;
 }
 
 .contacts {
-  width: 305px;
-  height: 305px;
+  width: 220px;
+  padding: 30px 30px 55px  30px;
   background-color: #fffefe;
   color: #323232;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   position: absolute;
-  top: 65px;
-  left: 830px;
+  top: -370px;
+  right: 27px;
 }
 
 .contacts a {
@@ -547,6 +581,10 @@ margin-bottom: 25px;
 .footer-social {
   width: 265px;
   height: 40px;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -555,9 +593,8 @@ margin-bottom: 25px;
 }
 
 .main-footer {
-  margin: 0;
-  padding: 0;
   width: 1150px;
+
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -581,17 +618,39 @@ margin-bottom: 25px;
   justify-content: space-between;
 }
 
-.footer-menu li {
+.footer-social {
   margin: 0;
   padding: 0;
-
+  width: 265px;
 }
+
+.footer-social li{
+  margin-right: 10px;
+}
+
 .footer-copyright {
   font-size: 12px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 500;
+  padding-top: 20px;
+  margin-bottom: 25px;
+  width: 150px;
+  margin: 0;
+  margin-left: auto;
+  text-align: center;
+  position: relative;
+}
+
+.footer-copyright img{
+  widows: 108px;
+  height: 39px;
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 0;
 
 }
+
 .user-navigation {
   width: 265px;
   font-size: 12px;
