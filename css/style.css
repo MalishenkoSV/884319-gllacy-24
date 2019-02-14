@@ -71,14 +71,14 @@ html {
 }
 
 img {
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherid;
+  box-sizing: inherit;
 }
 
 .container {
@@ -92,7 +92,6 @@ a{
 }
 
 .inner-page {
-  color: #ffffff;
   background: linear-gradientt(to top,  #95ab9f, #849d8f);
 }
 
@@ -330,9 +329,6 @@ visibility: hidden;
  color: #343434;
 }
 /*Блок слайдера*/
-.slider {
-  height: 900px;
- }
 
  .slider-toggle {
    width: 80px;
@@ -390,7 +386,6 @@ visibility: hidden;
 .ice-kind,
 .ice-catalog {
   min-width: 1145px;
-  height: 330px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: row;
@@ -407,9 +402,6 @@ visibility: hidden;
 }*/
 
 .card-item {
-  margin: 0;
-  padding: 0;
-  margin-right: 25px;
   font-size: 16px;
   line-height: 22px;
   width:265px;
@@ -430,7 +422,9 @@ visibility: hidden;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+
 }
 
 .card-item span {
@@ -530,8 +524,7 @@ li:hover .btn {
   display: flex;
   justify-content:center;
   margin-bottom: 30px;
-  height: 430px;
-  width: 1200px;
+  flex-wrap: wrap;
 
 }
 .map img {
@@ -542,8 +535,6 @@ li:hover .btn {
 }
 
 .contacts-container {
-  width: 305px;
-  height: 305px;
   position: relative;
 }
 
@@ -570,8 +561,19 @@ li:hover .btn {
   font-weight: 700;
 }
 
-.visually-hidden {
-  visibility: hidden;
+.pagination-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 85px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #a9bbb1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-list li{
+  padding-right: 10px;
+
 }
 
 .social-btn {
@@ -594,8 +596,6 @@ li:hover .btn {
 
 .main-footer {
   width: 1150px;
-
-  height: 40px;
   display: flex;
   justify-content: space-between;
 }

@@ -6,18 +6,6 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <div class="feedback">
-    <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
-      <label class="visually-hidden" for="name">Имя пользователя</label>
-      <input type="text" name="name-user" id="name" placeholder="Как Вас зовут?">
-      <label class="visually-hidden" for="mail-feedback">Электронная почта клиента</label>
-      <input type="text" name="e-mail" id="mail-feedback" placeholder="Ваша почта для ответа?">
-      <label for="comment-field">Ваши коментарии</label>
-      <textarea class="visually-hidden" name="comment" id="comment-field" rows="10">Напишите что-нибудь...
-      </textarea>
-      <button  class="btn" type="submit"></button>
-    </form>
-  </div>
   <body>
     <header class="header-main container">
       <div class="main-navigation-groop">
@@ -27,7 +15,7 @@
         <nav class="main-navigation">
           <ul class="site-navigation">
             <li>
-              <a href="#" class="nav-catalog">Каталог</a>
+              <a href="#" class="nav-catalog" class="btn">Каталог</a>
               <ul class="catalog-option">
                 <li><a href="#" class="option">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
@@ -36,7 +24,7 @@
                 <li><a href="#">Мелорин</a></li>
               </ul>
             </li>
-            <li><a href="#" class="nav-delivery" >Доставка и оплата</a></li>
+            <li><a href="#" class="nav-delivery">Доставка и оплата</a></li>
             <li><a href="#" class="nav-info">О Компании</a></li>
           </ul>
         </nav>
@@ -177,7 +165,7 @@
         </div>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <ul class="footer-social">
         <li><a class="social-btn social-btn-tw" href="#"><img src="img/twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
         <li><a class="social-btn social-btn-ins" href="#"><img src="img/instagram.svg" width="32" height="32" alt="Інстаграм"></a></li>
@@ -197,5 +185,17 @@
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> © 2019</p>
       </div>
   </footer>
+  <div class="feedback">
+    <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
+      <label class="visually-hidden" for="name">Имя пользователя</label>
+      <input type="text" name="name-user" id="name" placeholder="Как Вас зовут?">
+      <label class="visually-hidden" for="mail-feedback">Электронная почта клиента</label>
+      <input type="text" name="e-mail" id="mail-feedback" placeholder="Ваша почта для ответа?">
+      <label for="comment-field">Ваши коментарии</label>
+      <textarea class="visually-hidden" name="comment" id="comment-field" rows="10">Напишите что-нибудь...
+      </textarea>
+      <button  class="btn" type="submit"></button>
+    </form>
+  </div>
   </body>
 </html>
