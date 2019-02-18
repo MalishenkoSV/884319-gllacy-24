@@ -14,8 +14,8 @@
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li>
-              <a href="#" class="nav-catalog" class="btn">Каталог</a>
+            <li class="nav-catalog-site">
+              <a href="#" class="nav-catalog" class="btn btn-nav-catalog">Каталог</a>
               <ul class="catalog-option">
                 <li><a href="#" class="option">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
@@ -65,14 +65,32 @@
       <div class="container">
         <section class="slider">
           <div class="photoslider-item">
-            <p>Крем-брюле и пломбиp с малиновым джемом</p>
+            <ul class="slider-list">
+              <li class="slider-item slide" id="slide1">
+                <p class="slide-title">
+                  Крем-брюле и пломбир с малиновым джемом
+                </p>
+                <a class="btn btn-slider" href="#">Давайте оба!</a>
+              </li>
+              <li class="slider-item slide" id="slide2">
+                <p class="slide-title">
+                  Шоколадный пломбир и лимонный сорбет
+                </p>
+                <a class="btn btn-slider" href="#">Давайте оба!</a>
+              </li>
+              <li class="slider-item slide" id="slide3">
+                <p class="slide-title">
+                  Пломбир с помадкой и клубничный щербет
+                </p>
+                <a class="btn btn-slider" href="#">Давайте оба!</a>
+              </li>
+            </ul>
           </div>
-          <a class="btn btn-slider">Давайте оба!</a>
           <h2 class="visually-hidden">Слайдер мороженого</h2>
           <div class="slider-toggle">
-            <input type="radio" id="btn-1" name="toggle" checked>
-            <input type="radio" id="btn-2" name="toggle">
-            <input type="radio" id="btn-3" name="toggle">
+            <input class="visually-hidden" type="radio" id="btn-1" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="btn-2" name="toggle">
+            <input class="visually-hidden" type="radio" id="btn-3" name="toggle">
             <div class="slider-controls">
               <label for="btn-1"></label>
               <label for="btn-2"></label>
@@ -85,12 +103,12 @@
           <article class="raspberry">
             <h3 class="free">Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="btn ">Хочу варенье!</a>
+            <a class="btn  btn-advertising">Хочу варенье!</a>
           </article>
           <article class="chocolate">
             <h3 class="free">Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a class="btn ">Хочу шоколадки!</a>
+            <a class="btn btn-advertising">Хочу шоколадки!</a>
           </article>
         </section>
         <section class="ice-kind">
@@ -134,7 +152,7 @@
         <div class="container-news">
           <article class="news">
             <p>Новое в нашем блоге</p>
-            <a href="#" class="white">10 способов сервировки
+            <a href="#" class="some-news">10 способов сервировки
               фруктовых щербетов к
               столу</a>
           </article>
@@ -143,8 +161,8 @@
             <div>
               <form class="mailing">
                 <label class="visually-hidden" for="mailing">Электронная почта</label>
-                <input type="text" id="mailing" placeholder="Электронная почта">
-                <button class="btn" type="submit">Отправить</button>
+                <input  class="mailing-text" type="text" id="mailing" placeholder="   Электронная почта">
+                <button class="btn btn-submit" type="submit">Отправить</button>
               </form>
             </div>
           </section>
@@ -154,13 +172,13 @@
         <img src="img/map.png" width="1200" height="430" alt="Фото карты проезда к магазину»">
         <div class="container contacts-container">
           <div class="contacts">
-            <p>Адрес главного офиса
+            <p class="adress">Адрес главного офиса
                 и офлайн-магазина:</p>
-            <b>ул.Большая Конюшенная 19/8, Санкт-Петербург</b>
+            <b class="street">ул.Большая Конюшенная 19/8, Санкт-Петербург</b>
             <p>Для заказов по телефону:</p>
-            <b><a href="#">8 812 450-25-25</a></b>
-            <p>(с 10 до 20 ежедневно)</p>
-            <a class="btn" href="#">Форма обратной связи</a>
+            <b class="tel-number"><a href="#">8 812 450-25-25</a></b>
+            <p class="time">(с 10 до 20 ежедневно)</p>
+            <a class="btn btn-contacts" href="#">Форма обратной связи</a>
             </div>
         </div>
       </section>
@@ -182,7 +200,7 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
         </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> © 2019</p>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> &copy; 2019</p>
       </div>
   </footer>
   <div class="feedback">
