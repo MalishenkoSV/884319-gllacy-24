@@ -198,14 +198,14 @@ width: 100px;
   height: 30px;
 }
 
-.login-link {
-  width: 95px;
-  height: 35px;
-}
+
 
 .found {
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  margin-left:25px;
+  border-radius: 10px;
 }
 
 
@@ -240,6 +240,7 @@ font-weight: 700;
   margin-right: 30px;
 }
 
+
  .tel{
   font-size: 22px;
   line-height: 24px;
@@ -253,6 +254,10 @@ font-weight: 700;
   padding: 20px 15px;
   border-radius: 50px;
   border-radius: 30px;
+}
+
+.btn-nav-catalog:hover ul {
+  display: block;
 }
 
 .btn-advertising {
@@ -343,7 +348,8 @@ font-weight: 700;
   width: 200px;
   height: 45px;
   border: 0;
-  padding: 15px 20px;
+  margin: 20px 45px;
+  padding: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -353,35 +359,30 @@ font-weight: 700;
 }
 
  .btn-input {
+  width: 95px;
+  height: 35px;
   font-size: 14px;
   line-height: 16px;
+  font-weight: 500;
   background-color: #a1b4a9;
   color: #ffffff;
 }
+
 .btn-input:hover {
   background-color: #f8f7f4;
   color: #323232;
 }
-.btn-nav-catalog a:hover {
-  width: 35px;
-  height: 90px;
-  padding: 15px 10px;
-  color: #323232;
-  background-color: #f8f7f4;
-}
-.nav-catalog-site:hover ul {
-  display: block;
-}
 
-.btn-nav-catalog:hover {
+
+.nav-catalog-site:hover .btn-nav-catalog {
   width: 90px;
   height: 30px;
   color: #323232;
   background-color: #f7f6f3;
-
+  padding: 15px 10px;
 }
 
-.basket-red .btn-input:hover{
+.basket-red .btn-input:hover {
   color: #f7f6f3;
 }
 
@@ -518,7 +519,7 @@ visibility: hidden;
 
 }
 
-.card-item-hit::after {
+.card-item-hit::before {
   background-image: url("../img/hit.svg");
   position: absolute;
   background-repeat: no-repeat;
@@ -529,10 +530,27 @@ visibility: hidden;
   font-size: 16px;
   line-height: 22px;
   width:265px;
+  min-height: 325px;
   font-weight: 500;
-  background-color: #849d8f;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #849d8f;
 }
+
+.card-item:hover {
+  width: 295px;
+  height: 405px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #9bafa3;
+}
+
+.card-item:hover img {
+  align-self: center;
+}
+
 .card-item p {
   font-size: 45px;
   line-height: 45px;
@@ -543,12 +561,20 @@ visibility: hidden;
 }
 
 .ice {
+  width: 1146px;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 
+}
+
+.ice a {
+ width: 250px;
+ height: 45px;
+ margin: auto;
+ padding:  0;
+ align-self: center;
 }
 
 .card-item span {
@@ -557,9 +583,7 @@ visibility: hidden;
   font-weight: 700;
 }
 
-.card-item:hover {
-  background-color: #9bafa3;
-}
+
 .ice-cream {
   font-size: 16px;
   line-height: 22px;
