@@ -136,6 +136,12 @@ a:hover,a:active {
   line-height: 18px;
 }
 
+.main-header-logo {
+  width: 154px;
+  height: 64px;
+  margin-right: 25px;
+}
+
 .site-navigation {
   width: 650px;
   padding: 0;
@@ -160,34 +166,35 @@ a:hover,a:active {
 }
 
 .tel-order {
-  width: 170px;
+  width: 200px;
   align-self: flex-end;
 }
 
-.tel-order p{
+.tel-order p {
+  height: 25px;
+  padding-left: 20px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
-
+  margin: 0;
+  padding: 0;
 }
 
-.tel{
+.tel {
+  margin: 0;
+  padding: 0;
   font-size: 22px;
   line-height: 24px;
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
+  display: inline-block;
 }
 
 .header-main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
-}
-
-.main-header-logo {
-  margin-right: 23px;
 
 }
 
@@ -284,7 +291,6 @@ a:hover,a:active {
  .btn-input-login-link {
   width: 95px;
   height: 35px;
-  padding-left: 45px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -292,29 +298,14 @@ a:hover,a:active {
   color: #ffffff;
 }
 
-.found{
-  position: relative;
-  display: inline-block;
-}
-
-
-.found .btn:hover {
-  background-color: #f8f7f4;
-  color: #323232;
-}
-
-.user-navigation .btn-input-basket::before {
-  content:"";
-  width: 21px;
-  height: 20px;
-  background-image: url("../img/basket.svg");
-  color: #323232;
-  position: absolute;
-  background-repeat: no-repeat;
+.btn-input-login-link:hover .form-nav{
+  display: block;
+  margin-top: 20px;
 }
 
 .user-navigation .btn {
   background-color: #a1b4a9;
+  padding: 5px 10px;
 }
 
 .user-navigation .btn:hover {
@@ -322,53 +313,15 @@ a:hover,a:active {
   color: #323232;
 }
 
-.found:hover .input-search {
-  display: block;
-  box-shadow:  15px 15px 30px 5px #4c5a52;
-}
-
-.input-pop-up {
-
-}
-
-.btn-input-basket-red::before {
-  content:"";
-  width: 21px;
-  height: 20px;
-  background-image: url("../img/basket-red.svg");
-  color: #323232;
-  position: absolute;
-  background-repeat: no-repeat;
-
-}
 
 .user-navigation .btn-input-found {
-  display: inline-block;
-  border-radius: 40%;
-  width: 30px;
-  height: 30px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
 }
 
- .btn-input-found::before {
-  content:"";
-  width: 17px;
-  height: 17px;
-  margin: 0;
-  margin-left:25px;
-  background-image: url("../img/loupe.svg");
-  color: #323232;
-  position: absolute;
-  background-repeat: no-repeat;
-}
-
- .btn-input-login-link::before {
-  content:"";
-  width: 21px;
-  height: 19px;
-  background-image: url("../img/entrance.svg");
-  color: #323232;
-  position: absolute;
-  background-repeat: no-repeat;
+.change-color {
+  fill: #f8f7f4;
 }
 
 .input-search {
@@ -396,6 +349,7 @@ a:hover,a:active {
   color: #323232;
   background-color: #f7f6f3;
   padding: 10px 15px;
+
 }
 
 .btn-nav-catalog:active {
@@ -413,6 +367,7 @@ a:hover,a:active {
   color: #ffffff;
   background-color: #d07058;
   padding: 10px 15px;
+  text-decoration: none;
 }
 
 .catalog-option {
@@ -474,6 +429,12 @@ a:hover,a:active {
   line-height: 16px;
   font-weight: 700;
   border-bottom: 1px solid #d1d0ce;
+}
+
+.btn-input-basket {
+  width: 100px;
+  height: 35px;
+  display: inline-block;
 }
 
 .basket-red .btn-input-basket-red:hover {
@@ -540,11 +501,18 @@ visibility: hidden;
 
 .slider {
   position: relative;
-
-  padding-top: 321px;
-
   text-align: center;
   color: #ffffff;
+}
+
+.site-wrapper {
+  min-width: 940px;
+  background-image: url("../img/ice-cream1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  /* Для демонстрации */
+  min-height: 100vh;
 }
 
 .slider-list {
@@ -566,27 +534,45 @@ visibility: hidden;
   cursor: pointer;
 }
 
-
+.slider-controls {
+  position: absolute;
+}
 
  .slider-toggle {
    width: 80px;
    margin-top: 60px;
  }
+ #product-1:checked ~ .site-wrapper #slide1,
+ #product-2:checked ~ .site-wrapper #slide2,
+ #product-3:checked ~ .site-wrapper #slide3 {
+   display: block;
+ }
 
+ #product-1:checked ~ .site-wrapper label[for="product-1"],
+ #product-2:checked ~ .site-wrapper label[for="product-2"],
+ #product-3:checked ~ .site-wrapper label[for="product-3"] {
+   background-color: #ffffff;
+ }
 
-.photoslider-item {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  background-image: url("img/ice-cream.png");
-  background-repeat: no-repeat;
-  background-position: top center;
+ #product-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image:  url("../img/ice-cream1.png");
 }
 
-.photoslider-item p {
+#product-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image:  url("../img/ice-cream2.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image:  url("../img/ice-cream3.png");
+}
+
+.slide-title {
   font-size: 60px;
   line-height: 60px;
-  font-weight: 400;
+  font-weight: 700;
   width: 700px;
 
 }
@@ -717,7 +703,6 @@ visibility: hidden;
   font-weight: 700;
 }
 
-
 .ice-cream {
   font-size: 16px;
   line-height: 22px;
@@ -730,14 +715,8 @@ visibility: hidden;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  width: 560px;
-  height: 65px;
-  margin-top:25px;
-  padding: 0;
-  padding-left: 60px;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  display: flex;
+  margin-right: 30px;
 }
 
 .description {
@@ -746,19 +725,24 @@ visibility: hidden;
   padding-left: 20px;
   display: flex;
   flex-wrap: wrap;
-}
-
-.description h2 {
-  margin: 0;
-  padding: 0;
+  position: relative;
 }
 
 .description p {
   margin: 0;
+  margin-bottom: 30px;
+  margin-left: 40px;
   padding: 0;
+
 }
+
+.ice-cream-quality svg {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
 .shop-description {
-  width: 1155px;
   height: 305px;
   margin-bottom: 30px;
   display: inline-block;
@@ -781,31 +765,6 @@ visibility: hidden;
   padding-left: 20px;
   padding-right: 110px;
 
-}
-
-
-.description li::before {
-  content:"";
-  width: 49px;
-  height: 49px;
-  margin-top: 15px;
-  position: absolute;
-}
-
-.ice-cream-quality {
-  background-image: url("../img/ice-cream.svg");
-}
-
-.cow {
-  background-image: url("../img/cow.svg");
-}
-
-.eco {
-  background-image: url("../img/eco.svg");
-}
-
-.thermometer {
-  background-image: url("../img/thermometer.svg");
 }
 
 li:hover .btn {
@@ -970,53 +929,26 @@ li:hover .btn {
 /*Футер*/
 
 
-
 .footer-social {
   width: 265px;
   height: 40px;
   margin: 0;
-  margin-top: 30px;
   padding: 0;
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   margin-bottom: 30px;
   position: relative;
 }
 
-.social-btn::before {
-  content: "";
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  background-repeat: no-repeat;
-}
-
-.social-btn-tw {
-  background-image: url("../img/twitter.svg");
-}
-
-.social-btn-ins {
-  background-image: url("../img/instagram.svg");
-}
-
-.social-btn-fb {
-  background-image: url("../img/fb.svg");
-}
-
-.social-btn-vk {
-  background-image: url("../img/vk.svg");
-}
-
-
 .main-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .footer-menu {
-  margin: 0;
+  margin: 0 250px 0 200px;
   padding: 0;
+  padding-left: 30px;
   width: 350px;
   height: 40px;
   font-size: 13px;
@@ -1027,21 +959,11 @@ li:hover .btn {
   flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
-}
-
-
-.footer-menu .distributor::before {
-  content: "";
-  width: 15px;
-  height: 13px;
-  position: absolute;
   background-image: url("../img/heart.svg");
   background-repeat: no-repeat;
 }
-
-
 .footer-social li{
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .footer-copyright {
