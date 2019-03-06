@@ -379,7 +379,8 @@ a:hover,a:active {
   font-weight: 500;
   width: 140px;
   height: 35px;
-  padding: 10px 30px;
+  margin-top: 27px;
+  padding: 5px 15px;
   vertical-align: middle;
   text-align: center;
   border: 2px solid #fbfcfb;
@@ -602,13 +603,13 @@ a:hover,a:active {
 }
 
 .option::before {
-  top: 34px;
   content: "";
+  top: 34px;
+  left: 6px;
   height: 2px;
   width: 128px;
   position: absolute;
-  left: 6px;
-  bottom: 0;
+
   background-color: #d1d0ce;
 }
 
@@ -659,10 +660,31 @@ a:hover,a:active {
   background-color: #f7f6f3;
   color: #323232;
 }
+/*Таблица*/
+
+
+.form-order-basket table{
+  position: relative;
+  width: 100%;
+}
+
+.basket-table-col {
+  padding: 5px;
+}
+
+.form-order-basket::before {
+  content: "";
+  top: 130px;
+  left: 15px;
+  height: 2px;
+  width: 510px;
+  position: absolute;
+  background-color: #cacac7;
+}
 
 .catalog-option,
 .input-search,
-/*.feedback,*/
+.feedback,
 .form-nav,
 .basket-nav,
 .slide,
@@ -857,14 +879,16 @@ visibility: hidden;
   margin: 0;
   padding: 0;
   display: flex;
+
+}
+
+.breadcrumbs-list a,
+.breadcrumbs-list span {
+  margin-right: 10px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-}
-
-.breadcrumbs-list li,
-.breadcrumbs-list span {
-  margin-right: 10px
+  color: #ffffff;
 }
 
 /*блок хитов*/
@@ -898,6 +922,7 @@ visibility: hidden;
   display: flex;
   flex-direction: column;
 }
+
 .ice-card-item .card-item {
   margin-bottom: 40px;
 }
@@ -949,11 +974,19 @@ visibility: hidden;
 .ice-card-item {
   width: 1146px;
   margin: 0;
-
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.ice h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
 }
 
 .ice a {
@@ -975,44 +1008,135 @@ visibility: hidden;
   z-index: 1;
 }
 
-.ice-cream {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  margin-bottom: 40px;
-}
-
 .ices-catalog {
   margin: 0;
 }
 
-.filter fieldset {
-  border: 0 none;
+.ice-cream {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-align: center;
   padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+/*Фильтр*/
+
+.filter-form-wraper {
+  height: 35px;
+  margin: 10px 15px;
+  padding: 7px 15px;
+  background-color: #9db1a5;
+  border-radius: 30px;
 }
 
-.filter legend,
-.filter select {
-  padding: 0;
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
-.sort-cost,
-.fat,
-.fillers {
+.filter-form fieldset {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.filter-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 0;
+}
+
+.filter-form-wrapper-radio {
+  width: 415px;
+}
+
+.filter-form-wraper-checkbox {
+  width: 700px;
+}
+
+.filter-form-label {
+  position: relative;
+  padding-left: 30px;
+}
+
+.filter-form-label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.filter-form-label::before,
+.filter-form-label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.filter-form-label-radio::before {
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+  opacity: 0.8;
+
+}
+
+.filter-form-label-radio::after {
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-on.svg");
+  opacity: 0;
+}
+
+.filter-form-input:checked + .filter-form-label-radio::before,
+.filter-form-input:checked + .filter-form-label-checkbox::before {
+  opacity: 0;
+}
+
+.filter-form-input:checked + .filter-form-label-radio::after,
+.filter-form-input:checked + .filter-form-label-checkbox::after {
+ opacity: 0.8;
+}
+
+.filter-form-label-checkbox::before {
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.filter-form-label-checkbox::after {
+  width: 30px;
+  height: 25px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.filter-form-label-radio:hover,
+.filter-form-label-checkbox:hover {
+  fill: #ffffff;
+
+}
+
+.filter-form-label-radio:active,
+.filter-form-label-checkbox:active {
+  fill: #b5c4bc;
+}
+
+.sort-cost {
   margin: 5px 15px;
   height: 35px;
   padding: 0 15px;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 18px;
   line-height: 500;
   border-radius: 30px;
   background-color: #9db1a5;
@@ -1028,95 +1152,16 @@ visibility: hidden;
   color: #353535;
 }
 
-.fat {
-  width: 415px;
-  height: 35px;
+.range-filter {
+  width: 220px;
+  margin-top: 5px;
 }
 
-.fat label,
-.fillers label {
-  display: inline-block;
-  position: relative;
-  width: 22px;
-  height: 22px;
-  font-weight: 400;
-  margin-right: 10px;
-  margin-bottom: 0;
-  vertical-align: top;
-  background-color: transparent;
-  border: 2px solid #e6ebe9;
-}
-
-.fat label {
-  border-radius: 50%;
-  border: 4px solid #e6ebe9;
-}
-
-.fat:hover {
+.range-filter:hover {
   cursor: pointer;
 }
 
-.fat input:checked + label::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 8px;
-  height: 8px;
-  background-color: #e6ebe9;
-  border-radius: 50%;
-}
-
-.fillers input:checked + label::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 2px;
-  width: 4px;
-  height: 10px;
-  background-color: #e6ebe9;
-  transform: rotate(-45deg);
-  border: #8fa799;
-}
-
-
-.fillers input:checked + label::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: 12px;
-  width: 4px;
-  height: 22px;
-  background-color: #e6ebe9;
-  transform: rotate(45deg);
-}
-
-.fat:hover label,
-.fillers:hover label {
-  border: #ffffff;
-
-}
-
-.fat:active label,
-.fillers:active label {
-  border: #b5c4bc;
-}
-
-.fillers {
-  width: 700px;
-}
-
-.filter-item {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.range-filter {
-  width: 220px;
-}
-
-.filter legend {
+.filter-form-title {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -1129,7 +1174,7 @@ visibility: hidden;
   padding-top: 16px;
   padding-right: 20px;
   padding-left: 20px;
-  background: linear-gradient(to bottom, #abbcb2 0%, #a9bbb1 100%);
+  background: #9db1a5;
   border-radius: 30px;
 }
 
@@ -1164,6 +1209,10 @@ visibility: hidden;
 .range-controls .toggle-max {
   left: 124px;
 }
+
+/**Преимущества**/
+
+
 .description li {
   width: 530px;
   font-size: 16px;
@@ -1422,43 +1471,47 @@ li:hover .btn {
   background-color: transparent;
 }
 
-.pagination-list:hover .pagination-forward::before,
-.pagination-list:hover .pagination-back::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 2px;
-  width: 4px;
-  height: 10px;
-  background-color: #e6ebe9;
-  transform: rotate(-45deg);
-  border: #8fa799;
-}
-
-.pagination-list:hover .pagination-forward::after,
-.pagination-list:hover .pagination-back::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 2px;
-  width: 4px;
-  height: 10px;
-  background-color: #e6ebe9;
-  transform: rotate(45deg);
-  border: #8fa799;
-}
-
 .pagination-list .current {
   background-color: #ffffff;
   color: #323232;
   border-radius: 50%;
 }
 
-.pagination-back,
-.pagination-forward {
-  text-indent: -3000px;
+.pagination-list .pagination-back::before,
+.pagination-list .pagination-back::after,
+.pagination-list .pagination-forward::before,
+.pagination-list .pagination-forward::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background-color: #e6ebe9;
+
 }
 
+.pagination-list .pagination-back::before {
+  top: -3px;
+  left: 2px;
+  transform: rotate(45deg);
+}
+
+.pagination-list .pagination-back::after {
+  top: 3px;
+  left: 2px;
+  transform: rotate(-45deg);
+}
+
+.pagination-list .pagination-forward::before {
+  top: 3px;
+  left: 2px;
+  transform: rotate(45deg);
+}
+
+.pagination-list .pagination-forward::after {
+  top: -3px;
+  left: 2px;
+  transform: rotate(-45deg);
+}
 
 /*Футер*/
 
@@ -1693,7 +1746,7 @@ li:hover .btn {
   background: linear-gradient(to bottom,  #f26843 0%, #e74c36 100%);
   box-shadow: 0 2px 2px #bf4a3d;
   border: 0;
-  padding: 10px 15px;
+  padding: 5px 10px;
 }
 
 .btn-pop-up {
