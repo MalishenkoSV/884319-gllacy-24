@@ -487,9 +487,12 @@ input[type=password]:focus {
   font-weight: 400;
 }
 
-.active {
-  color: #323232;
-  background-color: #d07058;
+ .catalog-active {
+background-color: #d07058;
+ }
+
+.catalog-option .active {
+  color: #ffffff;
 }
 
 .catalog-option {
@@ -561,10 +564,7 @@ input[type=password]:focus {
   text-align: center;
 }
 
-.nav-catalog-site a:hover {
- color: rgba(232, 77, 55, 0.4);
- text-decoration-color: #f9cdc4;
-}
+
 
 .nav-catalog-site:active .menu-catalog-item {
   box-shadow: 0 -2px 2px #696969;
@@ -587,7 +587,7 @@ input[type=password]:focus {
 }
 
 .catalog-option li:active {
-  background-color:#e0d4d1;
+  background-color:#f6b5a5;
 }
 
 .option::before {
