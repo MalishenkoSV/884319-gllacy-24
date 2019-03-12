@@ -19,7 +19,7 @@ var isStorageSupport = true;
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-show");
-  /*overlay.classList.add("pop-up-overlay")*/
+  overlay.classList.add("pop-up-overlay");
   if (storage) {
     login.value = storage;
     password.focus();
