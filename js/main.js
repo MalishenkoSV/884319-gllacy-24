@@ -3,7 +3,7 @@ var link = document.querySelector(".btn-contacts");
 var popup = document.querySelector(".feedback-form");
 var close = popup.querySelector(".feedback-btn");
 var login = popup.querySelector("[name=login]");
-var form = popup.querySelector("feedback-form");
+var form = popup.querySelector(".feedback-form");
 var password = popup.querySelector("[name=mail-feedback]");
 var overlay = document.querySelector(".overlay")
 
@@ -41,6 +41,7 @@ form.addEventListener("submit", function (evt) {
     if (isStorageSupport) {
       localStorage.setItem("login", login.value);
     }
+   }
 });
 
 window.addEventListener("keydown", function (evt) {
