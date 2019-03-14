@@ -158,7 +158,6 @@ input[type="radio"].visually-hidden {
 }
 
 .tel-order .tel {
-  width: 175px;
   margin: 0;
   padding: 0;
   font-size: 22px;
@@ -166,7 +165,6 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
-  display: inline-block;
 }
 
 .header-main {
@@ -200,6 +198,7 @@ input[type="radio"].visually-hidden {
   padding: 15px 10px;
   border-radius: 30px;
   display: inline-block;
+  vertical-align: center;
   color: #ffffff;
   background: linear-gradient(to top, #e84c36 0%, #f16642 100%);
   box-shadow: 0 2px 2px #a83829;
@@ -234,7 +233,6 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-slider {
-  display: inline-block;
   padding: 10px 40px;
   font-size: 32px;
   line-height: 44px;
@@ -641,7 +639,6 @@ background-color: #d07058;
   width: 100px;
   height: 35px;
   background-color: #a1b4a9;
-  display: inline-block;
 }
 
 .found .btn-input-basket-red {
@@ -663,24 +660,20 @@ background-color: #d07058;
   color: #acacab;
 }
 
-.basket-table__col--price {
+.basket-table-col--price {
   width: 140px;
 }
 
-.basket-table__col--sum {
+.basket-table-col--sum {
   width: 70px;
 }
 
-.basket-table__col--label {
+.basket-table-col--label {
   width: 240px;
 }
 
 .basket-table-col--preview img {
  max-width: none;
-}
-
-.basket-table-col--label {
-  width: 250px;
 }
 
 .basket-table-total {
@@ -741,7 +734,6 @@ visibility: hidden;
   font-weight: 400;
   color: #323232;
   width: 290px;
-
 }
 
 .sort-cost:hover {
@@ -788,6 +780,7 @@ visibility: hidden;
 
 .slider-controls label {
   display: inline-block;
+  vertical-align:center;
   width: 22px;
   height: 22px;
   font-weight: 400;
@@ -1164,11 +1157,6 @@ visibility: hidden;
   opacity: 1;
 }
 
-.filter-form-label-radio:active,
-.filter-form-label-checkbox:active {
-
-}
-
 .container-groop {
   margin-right: 15px;
 }
@@ -1491,6 +1479,7 @@ li:hover .btn {
 
 .pagination-list a {
   display: inline-block;
+  vertical-align: center;
   min-width: 25px;
   height: 25px;
   padding: 4px;
@@ -1499,8 +1488,8 @@ li:hover .btn {
   text-align: center;
   font-size: 16px;
   line-height: 18px;
-  vertical-align: bottom;
   font-weight: 500;
+  vertical-align: bottom;
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
@@ -1510,6 +1499,11 @@ li:hover .btn {
 .pagination-list a:hover {
   color: #f8faf9;
   background-color: #9db1a5;
+}
+
+.pagination-list a:active {
+  color: #323232;
+  background-color: #ffffff;
 }
 
 .pagination-list .pagination-forward:hover,

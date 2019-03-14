@@ -16,22 +16,22 @@
           <nav class="main-navigation">
             <ul class="site-navigation">
               <li class="nav-catalog-site">
-                <a href="#" class="menu-catalog-item menu-catalog-item-current">Каталог</a>
+                <a href="#" class="menu-catalog-item menu-catalog-item-current" aria-label="Логотип магазина Глейси">Каталог</a>
                 <ul class="catalog-option">
-                  <li><a href="#" class="option">Новинки</a></li>
-                  <li class="catalog-active"><a href="index.html" class="active">Сливочное</a></li>
-                  <li><a href="#">Щербеты</a></li>
-                  <li><a href="#">Фруктовый лед</a></li>
-                  <li><a href="#">Мелорин</a></li>
+                  <li ><a href="#" class="option" aria-label="страница новинок">Новинки</a></li>
+                    <li><a href="catalog.html" aria-label="страница сливочного">Сливочное</a></li>
+                    <li><a href="#" aria-label="страница щербетов">Щербеты</a></li>
+                    <li><a href="#" aria-label="Страница фруктового льда">Фруктовый лед</a></li>
+                    <li><a href="#" aria-label="Страница мелорина">Мелорин</a></li>
                 </ul>
               </li>
-              <li class="nav-catalog-site"><a href="#" class="menu-catalog-item">Доставка и оплата</a></li>
-              <li class="nav-catalog-site"><a href="#" class="menu-catalog-item">О Компании</a></li>
+              <li class="nav-catalog-site"><a href="#" class="menu-catalog-item" aria-label="Информация о доставке и оплате мороженого">Доставка и оплата</a></li>
+                <li class="nav-catalog-site"><a href="#" class="menu-catalog-item" aria-label="Информация о компании">О Компании</a></li>
             </ul>
           </nav>
           <ul class="user-navigation">
               <li class="found found-search">
-                <a href="#" class="found-input btn-input-found" aria-label="Найти">
+                <a href="#" class="found-input btn-input-found" aria-label="Поиск информации на странице">
                   <svg class="change-color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path  d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
                 </a>
               <div class="input-pop-up input-search">
@@ -53,7 +53,7 @@
                   <label class="visually-hidden" for="password"> Пароль пользователя</label>
                   <input type="password" name="password-user" id="password" placeholder="Пароль">
                   <div class="order">
-                    <button class="btn btn-input" type="submit">Войти</button>
+                    <button class="btn btn-input" aria-label="Войти" type="submit">Войти</button>
                     <div class="links">
                       <a href="#" class="password-links" aria-label="Забыли пароль?">Забыли пароль?</a>
                       <a href="#" aria-label="Новая регистрация">Новая регистрация</a>
@@ -73,31 +73,31 @@
                     <caption class="visually-hidden">Товары в корзине:</caption>
                     <tr class="basket-table-item">
                       <td class="basket-table-col  basket-table-col--control">
-                        <button class="btn-order-one"></button>
+                        <button class="btn-order-one" aria-label="Удалить заказкнное мороженное"></button>
                       </td>
                       <td class="basket-table-col  basket-table-col--preview">
                         <img src="img/ice-1k.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                       </td>
                       <td class="basket-table-col  basket-table-col--label">  Пломбир с апельсиновым джемом</td>
-                      <td class="basket-table__col  basket-table__col--price">
-                          <span class="basket-table__amount">1,5 кг </span>x
-                          <span class="basket-table__price">200 руб.</span>
+                      <td class="basket-table__col  basket-table-col--price">
+                          <span class="basket-table-amount">1,5 кг </span>x
+                          <span class="basket-table-price">200 руб.</span>
                       </td>
-                      <td class="basket-table__col  basket-table__col--sum">
+                      <td class="basket-table-col  basket-table-col--sum">
                           300 руб.
                         </td>
                     </tr>
                     <tr class="basket-table-item">
                       <td class="basket-table-col  basket-table-col--control">
-                        <button class="btn-order-two"></button>
+                        <button class="btn-order-two" aria-label="Удалить второе заказанное мороженное"></button>
                       </td>
                       <td class="basket-table-col  basket-table-col--preview">
                         <img src="img/ice-2k.png" width="33" height="33" alt="Клубничный пломбир с присыпкой  из белого шоколада">
                       </td>
                       <td class="basket-table-col  basket-table-col--label"> Клубничный пломбир с присыпкой  из белого шоколада</td>
-                      <td class="basket-table__col  basket-table__col--price">
-                          <span class="basket-table__amount">1,5 кг</span> x
-                          <span class="basket-table__price">300 руб.</span>
+                      <td class="basket-table__col  basket-table-col--price">
+                          <span class="basket-table-amount">1,5 кг</span> x
+                          <span class="basket-table-price">300 руб.</span>
                       </td>
                       <td class="basket-table-col  basket-table-col--sum">
                           450 руб.
@@ -107,7 +107,7 @@
                       <td class="basket-table-total" colspan="5"><b>Итого: 750 руб.</b></td>
                     </tr>
                   </table>
-                  <button class="btn btn-submit-order" type="submit">Оформить заказ</button>
+                  <button class="btn btn-submit-order" type="submit" aria-label="Оформить заказ">Оформить заказ</button>
                 </form>
               </div>
             </li>
@@ -185,83 +185,83 @@
                   <label class="filter-form-label filter-form-label-checkbox" for="jams">джемы</label>
                 </div>
               </fieldset>
-              <button type="submit" class="btn-filter" >Применить</button>
+              <button type="submit" class="btn-filter" aria-label="Применить выбранные фильтры">Применить</button>
             </form>
            </div>
            <h3 class="visually-hidden">Каталог мороженого</h3>
            <ul class="ice ice-card-item">
-            <li class="card-item">
-              <img src="img/1.png" width="267" height="267" alt="Фото сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
-              <p>310 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию Сливочного с апельсиновым джемом и цитрусовой стружкой"><h4 class="ice-cream">Сливочное с апельсиновым джемом и цитрусовой стружкой</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li class="card-item" >
-              <img src="img/2.png" width="267" height="267" alt="Фото мороженого  Сливочно-кофейного с кусочками шоколада">
-              <p>380 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию Сливочно-кофейного с кусочками шоколада "><h4 class="ice-cream" >Сливочно-кофейное с кусочками шоколада</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li class="card-item">
-              <img src="img/3.png" width="267" height="267" alt="Фото мороженого Сливочно-клубничного с присыпкой из белого шоколада">
-              <p>355 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию Сливочно-клубничного с присыпкой из белого шоколада"><h4 class="ice-cream">Сливочно-клубничное с присыпкой из белого шоколада</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li class="card-item">
-              <img src="img/4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-              <p>415 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию Сливочное крем-брюле с карамельной подливкой"><h4 class="ice-cream">Сливочное крем-брюле с карамельной подливкой</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li class="card-item">
-              <img src="img/5.png" width="267" height="267" alt="Фото мороженого Сливочного с брусничным джемом">
-              <p>325 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию мороженого Сливочного с брусничным джемом" ><h4 class="ice-cream">Сливочное с брусничным джемом</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li class="card-item">
-              <img src="img/6.png" width="267" height="267" alt="Фото мороженого  Сливочно-черничное с цельными ягодами черники">
-              <p>410 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию мороженого Сливочно-черничное с цельными ягодами черники"><h4 class="ice-cream">Сливочно-черничное с цельными ягодами черники</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li  class="card-item">
-              <img src="img/7.png" width="267" height="267" alt="Фото мороженого Сливочно-лимонного с карамельной присыпкой">
-              <p>375 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию мороженого Сливочно-лимонного с карамельной присыпкой"><h4 class="ice-cream">Сливочно-лимонное с карамельной присыпкой</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li class="card-item">
-              <img src="img/8.png" width="267" height="267" alt="Фото мороженого Сливочного с шоколадной стружкой">
-              <p>320 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию мороженого Сливочного с шоколадной стружкой"><h4 class="ice-cream">Сливочное с шоколадной стружкой</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li  class="card-item">
-              <img src="img/9.png" width="267" height="267" alt="Фото мороженого Сливочно-ванильного с кусочками шоколада">
-              <p>440 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию Сливочно-ванильного мороженого с кусочками шоколада"><h4 class="ice-cream">Сливочно-ванильное с кусочками шоколада</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li  class="card-item">
-              <img src="img/10.png" width="267" height="267" alt="Фото мороженого Сливочного с ментоловым сиропом">
-              <p>435 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию Сливочного мороженого с ментоловым сиропом"><h4 class="ice-cream">Сливочно-кофейное с кусочками шоколада</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li  class="card-item">
-              <img src="img/11.png" width="267" height="267" alt="Фото мороженого Сливочного с кусочками черного шоколада">
-              <p>355 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию Сливочного мороженого с кусочками черного шоколада"><h4 class="ice-cream">Сливочного с кусочками черного шоколада</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
-            <li  class="card-item">
-              <img src="img/12.png" width="267" height="267" alt="Фото мороженого Сливочного с мятным сиропома">
-              <p>420 ₽/<span>кг</span></p>
-              <a href="#" aria-label="переход к описанию Сливочного мороженого с мятным сиропом"><h4 class="ice-cream">Сливочное с мятным сиропом</h4></a>
-              <button type="button" class="btn btn-catalog">Быстрый просмотр</button>
-            </li>
+             <li class="card-item">
+               <img src="img/1.png" width="267" height="267" alt="Фото сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
+               <p>310 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию Сливочного с апельсиновым джемом и цитрусовой стружкой"><h4 class="ice-cream">Сливочное с апельсиновым джемом и цитрусовой стружкой</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="Быстрый просмотр карточки сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">Быстрый просмотр</button>
+             </li>
+             <li class="card-item" >
+               <img src="img/2.png" width="267" height="267" alt="Фото мороженого  Сливочно-кофейного с кусочками шоколада">
+               <p>380 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию Сливочно-кофейного с кусочками шоколада"><h4 class="ice-cream" >Сливочно-кофейное с кусочками шоколада</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочно-кофейного с кусочками шоколада">Быстрый просмотр</button>
+             </li>
+             <li class="card-item">
+               <img src="img/3.png" width="267" height="267" alt="Фото мороженого Сливочно-клубничного с присыпкой из белого шоколада">
+               <p>355 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию Сливочно-клубничного с присыпкой из белого шоколада"><h4 class="ice-cream">Сливочно-клубничное с присыпкой из белого шоколада</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочно-клубничного с присыпкой из белого шоколада">Быстрый просмотр</button>
+             </li>
+             <li class="card-item">
+               <img src="img/4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+               <p>415 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию Сливочное крем-брюле с карамельной подливкой"><h4 class="ice-cream">Сливочное крем-брюле с карамельной подливкой</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочного крем-брюле с карамельной подливкой">Быстрый просмотр</button>
+             </li>
+             <li class="card-item">
+               <img src="img/5.png" width="267" height="267" alt="Фото мороженого Сливочного с брусничным джемом">
+               <p>325 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию мороженого Сливочного с брусничным джемом" ><h4 class="ice-cream">Сливочное с брусничным джемом</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочного с брусничным джемом">Быстрый просмотр</button>
+             </li>
+             <li class="card-item">
+               <img src="img/6.png" width="267" height="267" alt="Фото мороженого  Сливочно-черничное с цельными ягодами черники">
+               <p>410 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию мороженого Сливочно-черничное с цельными ягодами черники"><h4 class="ice-cream">Сливочно-черничное с цельными ягодами черники</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочно-черничное с цельными ягодами черники">Быстрый просмотр</button>
+             </li>
+             <li  class="card-item">
+               <img src="img/7.png" width="267" height="267" alt="Фото мороженого Сливочно-лимонного с карамельной присыпкой">
+               <p>375 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию мороженого Сливочно-лимонного с карамельной присыпкой"><h4 class="ice-cream">Сливочно-лимонное с карамельной присыпкой</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочно-лимонного с карамельной присыпкой">Быстрый просмотр</button>
+             </li>
+             <li class="card-item">
+               <img src="img/8.png" width="267" height="267" alt="Фото мороженого Сливочного с шоколадной стружкой">
+               <p>320 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию мороженого Сливочного с шоколадной стружкой"><h4 class="ice-cream">Сливочное с шоколадной стружкой</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочного с шоколадной стружкой">Быстрый просмотр</button>
+             </li>
+             <li  class="card-item">
+               <img src="img/9.png" width="267" height="267" alt="Фото мороженого Сливочно-ванильного с кусочками шоколада">
+               <p>440 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию Сливочно-ванильного мороженого с кусочками шоколада"><h4 class="ice-cream">Сливочно-ванильное с кусочками шоколада</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочно-ванильного мороженого с кусочками шоколада">Быстрый просмотр</button>
+             </li>
+             <li  class="card-item">
+               <img src="img/10.png" width="267" height="267" alt="Фото мороженого Сливочного с ментоловым сиропом">
+               <p>435 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию Сливочного мороженого с ментоловым сиропом"><h4 class="ice-cream">Сливочно-кофейное с кусочками шоколада</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочного с ментоловым сиропом">Быстрый просмотр</button>
+             </li>
+             <li  class="card-item">
+               <img src="img/11.png" width="267" height="267" alt="Фото мороженого Сливочного с кусочками черного шоколада">
+               <p>355 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию Сливочного мороженого с кусочками черного шоколада"><h4 class="ice-cream">Сливочного с кусочками черного шоколада</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочного с кусочками черного шоколада">Быстрый просмотр</button>
+             </li>
+             <li  class="card-item">
+               <img src="img/12.png" width="267" height="267" alt="Фото мороженого Сливочного с мятным сиропома">
+               <p>420 ₽/<span>кг</span></p>
+               <a href="#" aria-label="переход к описанию Сливочного мороженого с мятным сиропом"><h4 class="ice-cream">Сливочное с мятным сиропом</h4></a>
+               <button type="button" class="btn btn-catalog" aria-label="быстрый просмотр карточки Сливочного мороженого с мятным сиропом">Быстрый просмотр</button>
+             </li>
            </ul>
          </section>
          <ul class="pagination-list">
