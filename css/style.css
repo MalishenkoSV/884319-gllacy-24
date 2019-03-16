@@ -1423,6 +1423,7 @@ li:hover .btn {
 
 .contacts-container {
   position: relative;
+  z-index: 3;
 }
 
 .contacts {
@@ -1437,6 +1438,7 @@ li:hover .btn {
   position: absolute;
   top: -368px;
   right: 28px;
+  z-index: 3;
 }
 
 .contacts p {
@@ -1486,6 +1488,24 @@ li:hover .btn {
   padding: 10px 25px;
   color: #ffffff;
 }
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+}
+
+.photo-map {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 1220;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+}
+
+/*Пагинатор*/
 
 .pagination-list {
   margin: 0;
