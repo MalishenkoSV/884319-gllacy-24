@@ -540,6 +540,7 @@ background-color: #d07058;
   color: #ffffff;
   min-height: 30px;
   padding: 10px 15px;
+   margin: 0;
 }
 
 .menu-catalog-item-current {
@@ -910,6 +911,7 @@ visibility: hidden;
 
 .breadcrumbs-list {
   margin: 0;
+  margin-top: -25px;
   padding: 0;
   display: flex;
 
@@ -922,7 +924,13 @@ visibility: hidden;
   line-height: 16px;
   font-weight: 400;
   color: #ffffff;
+  margin:  3px;
 }
+
+.breadcrumbs-list .main {
+  margin-left: 0;
+}
+
 
 /*блок хитов*/
 
@@ -1048,6 +1056,16 @@ visibility: hidden;
   margin: 0;
 }
 
+.ices-catalog h2 {
+  margin: 0;
+  margin-top: 3px;
+  margin-bottom: 27px;
+  padding: 0;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
 .ice-cream {
   font-size: 16px;
   line-height: 22px;
@@ -1058,19 +1076,6 @@ visibility: hidden;
   z-index: 1;
 }
 /*Фильтр*/
-
-
-.filter-form-wraper {
-  height: 35px;
-  margin: 5px 0;
-  padding: 7px 15px;
-  background-color: #9db1a5;
-  border-radius: 30px;
-}
-
-.filter-form-wraper-radio {
-  width: 415px;
-}
 
 .filter-form {
   display: flex;
@@ -1086,13 +1091,18 @@ visibility: hidden;
 }
 
 .filter-form-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  padding-left: 0;
+  height: 35px;
+  margin: 5px 0;
+  padding: 7px 15px;
+  background-color: #9db1a5;
+  border-radius: 30px;
 }
 
-.filter-form-wraper-checkbox {
+.filter-form-wrapper-radio {
+  width: 415px;
+}
+
+.filter-form-wrapper-checkbox {
   width: 705px;
 }
 
@@ -1122,6 +1132,7 @@ visibility: hidden;
 }
 
 .filter-form-label-radio::after {
+  content: "";
   width: 25px;
   height: 25px;
   background-image: url("../img/radio-on.svg");
@@ -1144,6 +1155,7 @@ visibility: hidden;
 }
 
 .filter-form-label-checkbox::before {
+  content: "";
   width: 25px;
   height: 25px;
   background-image: url("../img/checkbox-off.svg");
@@ -1152,6 +1164,7 @@ visibility: hidden;
 }
 
 .filter-form-label-checkbox::after {
+  content: "";
   width: 30px;
   height: 25px;
   background-image: url("../img/checkbox-on.svg");
@@ -1180,6 +1193,17 @@ visibility: hidden;
   border-radius: 30px;
   background-color: #9db1a5;
   color: #ffffff;
+  position: relative;
+}
+
+.sort-cost::after {
+  content: "";
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top:5px;
+  background-image: url("../img/select-arrow.svg");
+  background-repeat: no-repeat;
 }
 
 .sort-cost .option {
@@ -1188,10 +1212,7 @@ visibility: hidden;
   line-height: 400;
 }
 
-.sort-cost:hover {
-  background-color: #fbfcfb;
-}
-
+.sort-cost:hover,
 .sort-cost:active {
   background-color: #eaeaea;
   color: #353535;
