@@ -100,12 +100,15 @@ input[type="radio"].visually-hidden {
   padding: 16px 5px;
   font-size: 16px;
   line-height: 18px;
+  margin-top: 5px;
 }
 
 .main-header-logo {
   width: 154px;
   height: 64px;
-  margin-right: 25px;
+  margin: 0;
+  margin-top: 10px;
+  margin-right: 5px;
 }
 
 .site-navigation {
@@ -113,6 +116,7 @@ input[type="radio"].visually-hidden {
   width: 400px;
   padding: 0;
   margin: 0;
+  margin-top: 10px;
   display:flex;
   justify-content: space-between;
 }
@@ -126,16 +130,17 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   justify-content: flex-end;
   margin: 0;
-  margin-top: 25px;
-  margin-left: auto;
+  margin-top: 24px;
+  margin-left:auto;
   padding: 0;
-  padding-left: 20px;
+  padding-left: 25px;
   margin-bottom: 20px;
 }
 
 .tel-order {
   align-self: flex-end;
   text-align: right;
+  margin-top: -20px;
 }
 
 .tel-order a:hover,
@@ -159,6 +164,7 @@ input[type="radio"].visually-hidden {
 
 .tel-order .tel {
   margin: 0;
+  margin-top: 20px;
   padding: 0;
   font-size: 22px;
   line-height: 24px;
@@ -207,7 +213,6 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-advertising {
-  width: 170px;
   height: 45px;
   margin: 0;
   padding: 10px  10px;
@@ -243,13 +248,7 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.slider-list p {
-  position: absolute;
-  bottom: 140px;
-  left: 240px;
-}
-
-.mailing .btn-submit {
+.btn-submit-order {
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -272,8 +271,8 @@ input[type="radio"].visually-hidden {
 }
 
  .btn-input-login-link {
-  width: 95px;
-  height: 35px;
+  width: 90px;
+  height: 30px;
   margin-bottom: 20px;
   position: relative;
 }
@@ -297,7 +296,7 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-weight: 400;
   color: #d3d3d3;
-
+  padding-left: 10px;
 }
 
 .form-order {
@@ -343,7 +342,7 @@ margin-top: 20px;
 
 .form-nav .btn-input {
   width: 100px;
-  height: 45px;
+  height: 30px;
   margin: 10px;
   margin-top: 20px;
   font-size: 18px;
@@ -403,6 +402,7 @@ margin-top: 20px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+  height: 30px;
   color: #ffffff;
   margin-left: 10px;
   text-decoration: none;
@@ -417,8 +417,7 @@ margin-top: 20px;
 
 .found .btn-input-found {
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  width: 30px;
 }
 
 .input-basket svg,
@@ -436,13 +435,11 @@ margin-top: 20px;
 input[type=text]:hover,
 input[type=email]:hover,
 input[type=password]:hover {
-  padding: 8px 14px;
   border: 2px solid #c7c6c5;
 }
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=password]:focus {
-  padding: 8px 14px;
   border: 2px solid #8fbdec;
 }
 
@@ -487,9 +484,10 @@ input[type=password]:focus {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
+  padding-left: 10px;
 }
 
- .catalog-active {
+.catalog-active {
 background-color: #d07058;
  }
 
@@ -637,13 +635,11 @@ background-color: #d07058;
 
 .btn-input-basket {
   width: 100px;
-  height: 35px;
   background-color: #a1b4a9;
 }
 
 .found .btn-input-basket-red {
   width: 120px;
-  height: 35px;
   background-color: #f7f6f3;
   color: #323232;
 }
@@ -706,8 +702,8 @@ background-color: #d07058;
 
 .catalog-option,
 .input-search,
-/*.feedback,
-.pop-up-overlay,*/
+.feedback,
+.pop-up-overlay,
 .form-nav,
 .basket-nav,
 .slide,
@@ -715,14 +711,6 @@ background-color: #d07058;
   display: none;
 }
 
-.free {
-  margin: 0;
-  padding: 0;
-  font-size: 35px;
-  line-height: 41px;
-  font-weight: 700;
-
-}
 
 .card-item .btn {
 visibility: hidden;
@@ -775,14 +763,15 @@ visibility: hidden;
 
 .slider-list {
   margin: 0;
+  margin-top: 23px;
   padding: 0;
 }
 
 .slider-controls label {
   display: inline-block;
   vertical-align:center;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   font-weight: 400;
   margin-right: 10px;
   margin-bottom: 65px;
@@ -844,18 +833,20 @@ visibility: hidden;
 }
 
 .slide-title {
+  position: absolute;
+  bottom: 75px;
+  left: 222px;
   font-size: 60px;
-  line-height: 60px;
+  line-height: 60.35px;
   font-weight: 700;
   width: 700px;
-  margin: 0 auto;
-  margin-bottom: 27px;
 }
 
 
 /*Блок акции*/
 .raspberry p,
 .chocolate p {
+  margin: 0;
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
@@ -863,18 +854,29 @@ visibility: hidden;
 
 .advertising {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 40px;
+}
 
+.free-order {
+  display: flex;
+  flex-direction: column;
 }
 
 .advertising article {
-  padding: 20px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border-radius: 15px;
+}
 
+.free {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
 }
 
 .raspberry {
@@ -886,12 +888,22 @@ visibility: hidden;
   background-repeat: no-repeat;
 }
 
+.raspberry .btn{
+  width: 165px;
+  margin-top: 5px;
+}
+
 .chocolate {
   width: 560px;
   height: 230px;
   background-color: #723e1b;
   background-image: url("../img/chocolate.png");
   background-repeat: no-repeat;
+}
+
+.chocolate .btn {
+  width: 190px;
+  margin-top: 5px;
 }
 
 /*Каталог*/
@@ -919,7 +931,7 @@ visibility: hidden;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 40px 0;
+  margin: 0;
 }
 
 .card-item-hit::before {
@@ -944,10 +956,6 @@ visibility: hidden;
   flex-direction: column;
 }
 
-.ice-card-item .card-item {
-  margin-bottom: 40px;
-}
-
 .card-item::after {
   content: "";
   position: absolute;
@@ -956,7 +964,7 @@ visibility: hidden;
   z-index: 1;
   width: 110%;
   min-height: 108%;
-  margin-top: -10px;
+  margin-top: 5px;
   border-radius: 5px;
   opacity: 0;
 }
@@ -971,10 +979,6 @@ visibility: hidden;
   z-index: 1;
 }
 
-.card-item img {
-  margin-top: -10px;
-}
-
 .card-item:hover img {
   align-self: center;
   z-index: 1;
@@ -985,7 +989,7 @@ visibility: hidden;
   line-height: 45px;
   font-weight: 700;
   position: absolute;
-  top: 165px;
+  top: 195px;
   left: 0;
   z-index: 1;
 }
@@ -993,6 +997,7 @@ visibility: hidden;
 .ice {
   width: 1146px;
   margin: 0;
+  margin-bottom: -9px;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -1001,7 +1006,6 @@ visibility: hidden;
 
 .ice-card-item {
   width: 1146px;
-  margin: -10px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -1018,7 +1022,8 @@ visibility: hidden;
 .card-item a {
  width: 250px;
  height: 45px;
- margin: auto;
+ margin: 0;
+ margin-top: 15px;
  padding:  0;
  font-size: 16px;
  line-height: 22px;
@@ -1026,6 +1031,10 @@ visibility: hidden;
  align-self: center;
  color:#ffffff;
  text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.ice p {
+  margin-top: 15px;
 }
 
 .card-item span {
@@ -1248,6 +1257,23 @@ visibility: hidden;
 }
 
 /**Преимущества**/
+.shop-description {
+  min-height: 305px;
+  margin-bottom: 41px;
+  padding-top: 15px;
+  background-color: #ece1c9;
+  color: #323232;
+  background-image: url("../img/waffle.png");
+  background-repeat: repeat;
+  border-radius: 10px;
+}
+
+.shop-description h2 {
+  margin: 10px 20px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
 
 .description li {
   width: 530px;
@@ -1255,14 +1281,14 @@ visibility: hidden;
   line-height: 22px;
   font-weight: 400;
   display: flex;
-  margin-right: 30px;
-  padding-left: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-right: 33px;
+  padding-left: 52px;
   position: relative;
 }
 
 .description li:nth-child(-n-2) {
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .description li::before {
@@ -1272,12 +1298,13 @@ visibility: hidden;
   background-repeat: no-repeat;
   position: absolute;
   top: -10px;
-  left: -5px;
+  left: 0;
 }
 
 .description {
   margin: 0;
   padding: 0;
+  padding-top: 10px;
   padding-left: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -1285,6 +1312,7 @@ visibility: hidden;
 
 .description p {
   margin: 0;
+  margin-left: 7px;
 }
 
 .ice-cream-quality::before  {
@@ -1301,24 +1329,6 @@ visibility: hidden;
 
 .thermometer::before  {
   background-image: url("../img/thermometer.svg");
-}
-
-.shop-description {
-  margin-bottom: 30px;
-  padding-top: 30px;
-  background-color: #ece1c9;
-  color: #323232;
-  background-image: url("../img/waffle.png");
-  background-repeat: repeat;
-  border-radius: 10px;
-}
-
-.shop-description h2 {
-  margin-bottom: 30px;
-  margin-left: 20px;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 500;
 }
 
 li:hover .btn {
@@ -1338,7 +1348,6 @@ li:hover .btn {
   height: 80px;
   font-size: 24px;
   line-height: 30px;
-
 }
 
 .news {
@@ -1360,7 +1369,7 @@ li:hover .btn {
   line-height: 22px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 3px;
 }
 
 .form-mailing {
@@ -1373,24 +1382,31 @@ li:hover .btn {
   border-radius: 10px;
 }
 
+.mailing-text {
+  margin-left: 25px;
+  height: 45px;
+  width: 370px;
+  border-radius: 5px;
+}
+
+.mailing-text::placeholder {
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
 .form-mailing p {
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   width: 510px;
   height: 60px;
-  margin: 40px 25px 35px 25px;
+  margin: 35px 25px;
   padding: 0;
 }
 
-.mailing-text {
-  margin-left: 25px;
-  margin-right: 10px;
-  margin-bottom: 40px;
-  height: 45px;
-  width: 370px;
-  border-radius: 5px;
-}
 
 /*Карта*/
 .map {
@@ -1410,17 +1426,17 @@ li:hover .btn {
 }
 
 .contacts {
-  width: 305px;
-  height: 305px;
-  padding: 30px  50px  30px 25px;
+  width: 300px;
+  height: 300px;
+  padding: 30px  40px  30px 25px;
   background-color: #fffefe;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   border-radius: 10px;
   position: absolute;
-  top: -370px;
-  right: 27px;
+  top: -368px;
+  right: 28px;
 }
 
 .contacts p {
@@ -1436,11 +1452,19 @@ li:hover .btn {
   margin-right: 80px;
 }
 
-.contacts .street {
+.contacts .street,
+.contacts .town {
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
-  margin-bottom: 25px;
+}
+
+.contacts .street {
+  margin-bottom: 5px;
+}
+
+.contacts .town {
+  margin-bottom: 15px;
 }
 
 .contacts a {
@@ -1449,6 +1473,7 @@ li:hover .btn {
   font-weight: 700;
   color: #323232;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 .contacts .btn-contacts {
@@ -1565,9 +1590,10 @@ li:hover .btn {
 }
 
 .footer-social {
-  width: 265px;
+  width: 220px;
   height: 40px;
   margin: 0;
+  margin-top: 5px;
   padding: 0;
   display: flex;
   justify-content: flex-start;
@@ -1583,20 +1609,20 @@ li:hover .btn {
 .footer-menu {
   margin: 0;
   padding: 0;
-  padding-left: 20px;
+  padding-left: 10px;
   width: 350px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-self: flex-start;
   flex-wrap: wrap;
   position: relative;
-  align-content: flex-start;
 }
 
 .footer-menu::before {
   content: "";
   position: absolute;
   top: 5px;
-  left: 0;
+  left: -12px;
   width: 15px;
   height: 13px;
   fill: #ffffff;
@@ -1615,11 +1641,11 @@ li:hover .btn {
 }
 
 .footer-menu li {
-  min-width: 160px;
+  min-width: 140px;
 }
 
 .footer-social li {
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 .footer-social svg {
@@ -1661,11 +1687,12 @@ li:hover .btn {
   width: 108px;
   height: 39px;
   display: block;
+  margin-top: -14px;
 }
 
 .footer-copyright p {
   padding: 0;
-  margin: 0;
+  margin-top: 5px;
 }
 
 /*POP-UP*/
@@ -1677,6 +1704,10 @@ li:hover .btn {
   height: 445px;
   background-color: #f8f7f4;
   animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .pop-up-overlay {
@@ -1788,17 +1819,6 @@ li:hover .btn {
 
 .feedback-btn::after {
   transform: rotate(-45deg);
-}
-
-.form-order-basket .btn-submit-order {
-  width: 170px;
-  height: 45px;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 700;
-  padding: 5px 10px;
-  display: block;
-  margin-left: auto;
 }
 
 .btn-pop-up {
