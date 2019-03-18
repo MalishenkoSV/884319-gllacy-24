@@ -1,27 +1,27 @@
 /* Шрифты */
 @font-face {
-  font-family: 'robotoregular';
-  src: local('Roboto regular'), local('Roboto-regular');
-  src: url('roboto-regular.woff2') format('woff2'),
-       url('roboto-regular.woff') format('woff');
+  font-family: "Roboto";
+  src: local("Roboto regular"), local("Roboto-regular"),
+       url("../fonts/roboto-regular.woff2") format("woff2"),
+       url("../fonts/roboto-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'robotomedium';
-  src: local('Roboto Medium'), local('Roboto-Medium');
-  src: url('roboto-medium.woff2') format('woff2'),
-       url('roboto-medium.woff') format('woff');
+  font-family: "Roboto";
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+       url("../fonts/roboto-medium.woff2") format("woff2"),
+       url("../fonts/roboto-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'robotobold';
-  src: local('Roboto Bold'), local('Roboto-Bold');
-  src: url('roboto-bold.woff2') format('woff2'),
-       url('roboto-bold.woff') format('woff');
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+       url("../fonts/roboto-bold.woff2") format("woff2"),
+       url("../fonts/roboto-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -118,7 +118,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-top: 10px;
   display:flex;
-  justify-content: space-between;
 }
 
 .user-navigation {
@@ -199,6 +198,8 @@ input[type="radio"].visually-hidden {
 }
 
 /*Кнопки*/
+
+
 .btn {
   text-decoration: none;
   padding: 15px 10px;
@@ -248,14 +249,16 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.btn-submit-order {
+.mailing .btn-submit-mailing {
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   width: 130px;
   height: 45px;
-  padding: 15px 20px;
   border: 0;
+  padding: 10px 10px;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .btn-catalog{
@@ -280,8 +283,8 @@ input[type="radio"].visually-hidden {
 .login-link:hover .form-nav {
   margin: 20px;
   position: absolute;
-  top: 20px;
-  left: -240px;
+  top: 15px;
+  left: -200px;
   display: block;
   width: 280px;
   height: 215px;
@@ -342,7 +345,7 @@ margin-top: 20px;
 
 .form-nav .btn-input {
   width: 100px;
-  height: 30px;
+  height: 45px;
   margin: 10px;
   margin-top: 20px;
   font-size: 18px;
@@ -451,7 +454,7 @@ input[type=password]:focus {
   width: 340px;
   height: 85px;
   position: absolute;
-  top: 50px;
+  top: 35px;
   left: -300px;
   border-radius: 5px;
   background-color: #f8f7f4;
@@ -461,6 +464,7 @@ input[type=password]:focus {
   padding: 10px;
   border: 1px solid #999999;
   color: #999999;
+  box-sizing: border-box;
 }
 
 .input-search input {
@@ -538,17 +542,17 @@ background-color: #d07058;
 .menu-catalog-item {
   background-color: rgba(255, 255, 255, 0);
   color: #ffffff;
-  min-height: 30px;
-  padding: 10px 15px;
-   margin: 0;
+  height: 25px;
+  padding: 7px 15px;
+  margin: 0;
 }
 
 .menu-catalog-item-current {
-  width: 90px;
+  width: 85px;
   min-height: 30px;
   color: #ffffff;
   background-color: #d07058;
-  padding: 10px 15px;
+  padding: 7px 15px;
   text-decoration: none;
   border-radius: 30px;
 }
@@ -585,6 +589,13 @@ background-color: #d07058;
   background-color:#f6b5a5;
 }
 
+.catalog-option li:hover:first-child,
+.catalog-option li:active:last-child,
+.catalog-option li:active:first-child,
+.catalog-option li:hover:last-child {
+  border-radius: 5px;
+}
+
 .option::before {
   content: "";
   top: 35px;
@@ -604,8 +615,8 @@ background-color: #d07058;
   color: #323232;
   border-radius: 5px;
   position: absolute;
-  top: 55px;
-  left: -450px;
+  top: 50px;
+  left: -410px;
   box-shadow: 2px 20px 20px #5c6961;
   z-index: 10;
 }
@@ -691,6 +702,10 @@ background-color: #d07058;
   position: relative;
 }
 
+.form-order-basket .btn-submit-order {
+
+}
+
 .form-order-basket::before {
   content: "";
   top: 130px;
@@ -720,7 +735,7 @@ visibility: hidden;
 .some-news {
   font-size: 24px;
   line-height: 30px;
-  font-weight: 400;
+  font-weight: 700;
   color: #323232;
   width: 290px;
 }
@@ -864,16 +879,15 @@ visibility: hidden;
 }
 
 .advertising article {
-  padding: 0 20px;
+  padding: 15px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   border-radius: 15px;
 }
 
 .free {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 0;
   font-size: 35px;
   line-height: 41px;
@@ -891,7 +905,8 @@ visibility: hidden;
 
 .raspberry .btn{
   width: 165px;
-  margin-top: 5px;
+  margin-top: 45px;
+
 }
 
 .chocolate {
@@ -904,7 +919,7 @@ visibility: hidden;
 
 .chocolate .btn {
   width: 190px;
-  margin-top: 5px;
+  margin-top: 45px;
 }
 
 /*Каталог*/
@@ -962,6 +977,7 @@ visibility: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
+
 }
 
 .card-item::after {
@@ -997,6 +1013,8 @@ visibility: hidden;
   line-height: 45px;
   font-weight: 700;
   position: absolute;
+  padding: 0;
+  margin: 0;
   top: 195px;
   left: 0;
   z-index: 1;
@@ -1054,6 +1072,7 @@ visibility: hidden;
 
 .ices-catalog {
   margin: 0;
+  margin-bottom: 5px;
 }
 
 .ices-catalog h2 {
@@ -1080,7 +1099,7 @@ visibility: hidden;
 .filter-form {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   width: 100%;
 }
 
@@ -1124,8 +1143,8 @@ visibility: hidden;
 }
 
 .filter-form-label-radio::before {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   background-image: url("../img/radio-off.svg");
   opacity: 0.8;
 
@@ -1133,8 +1152,8 @@ visibility: hidden;
 
 .filter-form-label-radio::after {
   content: "";
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   background-image: url("../img/radio-on.svg");
   opacity: 0;
 }
@@ -1173,9 +1192,7 @@ visibility: hidden;
 }
 
 .filter-form-label-radio:hover::before,
-.filter-form-label-checkbox:hover::before,
-.filter-form-label-radio:hover::after,
-.filter-form-label-checkbox:hover::after {
+.filter-form-label-checkbox:hover::before {
   opacity: 1;
 }
 
@@ -1274,7 +1291,7 @@ visibility: hidden;
 }
 
 .range-controls .toggle-max {
-  left: 124px;
+  left: 132px;
 }
 
 /**Преимущества**/
@@ -1296,6 +1313,15 @@ visibility: hidden;
   font-weight: 500;
 }
 
+.description {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .description li {
   width: 530px;
   font-size: 16px;
@@ -1304,7 +1330,7 @@ visibility: hidden;
   display: flex;
   margin-bottom: 20px;
   margin-right: 33px;
-  padding-left: 52px;
+  padding-left: 47px;
   position: relative;
 }
 
@@ -1320,15 +1346,6 @@ visibility: hidden;
   position: absolute;
   top: -10px;
   left: 0;
-}
-
-.description {
-  margin: 0;
-  padding: 0;
-  padding-top: 10px;
-  padding-left: 20px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .description p {
@@ -1403,6 +1420,11 @@ li:hover .btn {
   border-radius: 10px;
 }
 
+.mailing {
+  margin: 0;
+  padding: 0;
+}
+
 .mailing-text {
   margin-left: 25px;
   height: 45px;
@@ -1411,11 +1433,10 @@ li:hover .btn {
 }
 
 .mailing-text::placeholder {
-  margin-top: 5px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 .form-mailing p {
@@ -1490,13 +1511,20 @@ li:hover .btn {
   margin-bottom: 15px;
 }
 
+.contacts .order-contacts {
+  margin-bottom: 10px;
+}
+
 .contacts a {
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
   color: #323232;
   text-decoration: none;
-  margin-top: 10px;
+}
+
+.contacts .tel-contacts {
+  margin-bottom: 20px;
 }
 
 .contacts .btn-contacts {
@@ -1505,7 +1533,7 @@ li:hover .btn {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  margin-top: 25px;
+  margin-top: 23px;
   padding: 10px 25px;
   color: #ffffff;
 }
@@ -1827,6 +1855,16 @@ li:hover .btn {
   background-color: #323232;
 }
 
+
+.feedback-btn::before {
+  transform: rotate(45deg);
+}
+
+.feedback-btn::after {
+  transform: rotate(-45deg);
+}
+
+
 .form-order-basket td {
   padding: 5px;
 }
@@ -1851,14 +1889,6 @@ li:hover .btn {
 
 .form-order-basket .btn-order-one::after,
 .form-order-basket .btn-order-two::after {
-  transform: rotate(-45deg);
-}
-
-.feedback-btn::before {
-  transform: rotate(45deg);
-}
-
-.feedback-btn::after {
   transform: rotate(-45deg);
 }
 
