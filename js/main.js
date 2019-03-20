@@ -5,7 +5,7 @@ var close = popup.querySelector(".feedback-btn");
 var login = popup.querySelector("[name=name-user]");
 var password = popup.querySelector("[name=mail-feedback]");
 var overlay = document.querySelector(".overlay")
-
+var form = document.querySelector(".feedback-form");
 var isStorageSupport = true;
   var storage = "";
 
@@ -34,7 +34,7 @@ close.addEventListener("click", function (evt) {
   overlay.classList.remove("pop-up-overlay");
 });
 
-popup.addEventListener("submit", function () {
+form.addEventListener("submit", function () {
   if (!login.value || !password.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
