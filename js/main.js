@@ -1,10 +1,8 @@
 'use strict'
 var link = document.querySelector(".btn-contacts");
-var popup = document.querySelector(".feedback-form");
+var popup = document.querySelector(".feedback");
 var close = popup.querySelector(".feedback-btn");
 var login = popup.querySelector("[name=name-user]");
-var password = popup.querySelector("[name=e-mail]");
-var form = popup.querySelector(".feedback-form");
 var password = popup.querySelector("[name=mail-feedback]");
 var overlay = document.querySelector(".overlay")
 
@@ -36,7 +34,7 @@ close.addEventListener("click", function (evt) {
   overlay.classList.remove("pop-up-overlay");
 });
 
-form.addEventListener("submit", function () {
+popup.addEventListener("submit", function () {
   if (!login.value || !password.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
