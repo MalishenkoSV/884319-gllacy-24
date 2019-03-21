@@ -178,11 +178,8 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
 }
 
-.card-item a,
-.ice a,
 .main-footer a {
-  z-index: 2;
-  color: #ffffff;
+ color: #ffffff;
 }
 
 .btn:hover,
@@ -265,12 +262,14 @@ input[type="radio"].visually-hidden {
   width: 200px;
   height: 45px;
   border: 0;
-  margin: 0 auto;
   padding: 10px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  z-index: 2;
+  position: absolute;
+  top: 330px;
+  left: 30px;
+  z-index: 10;
 }
 
  .btn-input-login-link {
@@ -753,9 +752,6 @@ visibility: hidden;
   width: 290px;
 }
 
-.sort-cost:hover {
- color: #343434;
-}
 
 /*Блок слайдера*/
 
@@ -968,6 +964,14 @@ visibility: hidden;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
+  margin-bottom: 95px;
+}
+
+.ice-card-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .card-item-hit::before {
@@ -985,7 +989,6 @@ visibility: hidden;
   font-size: 16px;
   line-height: 22px;
   width: 265px;
-  height: 360px;
   font-weight: 500;
   position: relative;
   display: flex;
@@ -993,32 +996,35 @@ visibility: hidden;
   padding: 0;
 }
 
+.ice-card-item .card-item {
+  margin-bottom: 95px;
+}
+
+
 .card-item::after {
   content: "";
   position: absolute;
   top: -4%;
   left: -5%;
   z-index: 1;
-  width: 110%;
-  min-height: 108%;
-  margin-top: 5px;
+  width: 285px;
+  min-height: 405px;
   border-radius: 5px;
   opacity: 0;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(248, 247, 244, 0.2);
 }
 
 .card-item:hover::after,
 .ice:hover::after {
-  border-radius: 5px;
-  min-height: 400px;
-  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.2);
   opacity: 1;
-  z-index: 1;
 }
+
 
 .card-item:hover img {
   align-self: center;
   z-index: 1;
+
 }
 
 .card-item p {
@@ -1048,36 +1054,44 @@ visibility: hidden;
 
 }
 
-.ice-card-item {
-  width: 1146px;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.ice a,
 .card-item a {
  width: 250px;
- height: 45px;
- margin: 0;
- margin-top: 15px;
  padding:  0;
  font-size: 16px;
  line-height: 22px;
  text-align: center;
- align-self: center;
+ position: absolute;
+ top: 275px;
+ left: 10px;
  color:#ffffff;
+ text-decoration: underline;
  text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-item a:hover,
+.card-item a:active {
+  color: #ffbc9e;
+  text-decoration-color: #f9cdc4;
 }
 
 .ice p {
   margin: 0;
 }
 
+.ice-cream {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+/*Фильтр*/
 .ices-catalog {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .ices-catalog h2 {
@@ -1089,19 +1103,6 @@ visibility: hidden;
   line-height: 41px;
   font-weight: 700;
 }
-
-.ice-cream {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
-  text-align: center;
-  position: absolute;
-  top: 280px;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-/*Фильтр*/
 
 .filter-form {
   display: flex;
@@ -1136,7 +1137,7 @@ visibility: hidden;
 .filter-form-label {
   position: relative;
   padding-left: 30px;
-  margin-right: 15px;
+  margin-right: 16px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1219,16 +1220,17 @@ visibility: hidden;
 
 .container-groop {
   margin-right: 15px;
+
 }
 
 .sort-cost {
   -webkit-appearance: none;
   -moz-appearance:none;
   appearance: none;
-  margin: 5px 0;
+  margin: 5px 2px;
   height: 35px ;
   width: 190px;
-  padding: 0 12px;
+  padding: 0 10px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1239,6 +1241,10 @@ visibility: hidden;
   background-image: url("../img/select-arrow.svg");
   background-position: 170px 13px;
   background-repeat: no-repeat;
+}
+
+.sort-cost:hover {
+  background-image: url("../img/icon-down-dir.svg");
 }
 
 .sort-cost .option {
@@ -1263,7 +1269,7 @@ visibility: hidden;
 }
 
 .filter-form-title {
-  margin: 0 13px;
+  margin: 0 15px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -1315,8 +1321,11 @@ visibility: hidden;
 /**Преимущества**/
 .shop-description {
   min-height: 305px;
-  margin-bottom: 41px;
+  margin-bottom: 40px;
+  padding: 20px;
   padding-top: 15px;
+  padding-bottom: 0;
+  padding-right: 0;
   background-color: #ece1c9;
   color: #323232;
   background-image: url("../img/waffle.png");
@@ -1326,6 +1335,7 @@ visibility: hidden;
 
 .shop-description h2 {
   margin: 10px 20px;
+  margin-left: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -1335,24 +1345,21 @@ visibility: hidden;
   margin: 0;
   padding: 0;
   padding-top: 10px;
-  padding-left: 18px;
   display: flex;
   flex-wrap: wrap;
+  align-content: space-between ;
 }
 
 .description li {
-  width: 525px;
+  width: 550px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
+  padding-right: 20px;
   margin-bottom: 24px;
-  margin-right: 35px;
   padding-left: 57px;
   position: relative;
-}
-
-.description li:nth-child(-n-2) {
-  margin-bottom: 15px;
+  margin-left: 5px;
 }
 
 .description li::before {
@@ -1366,6 +1373,7 @@ visibility: hidden;
 }
 
 .description p {
+  width: 100%;
   margin: 0;
 }
 
@@ -1575,16 +1583,23 @@ li:hover .btn {
 
 .pagination-list {
   margin: 0;
+  margin-top: 7px;
+  padding: 0;
   padding-top: 40px;
   padding-bottom: 30px;
-  border-bottom: 2px solid #a9bbb1;
+  border-bottom: 1px solid #a9bbb1;
   display: flex;
   justify-content: flex-end;
 }
 
 .pagination-list li {
-  padding-right: 10px;
+  width: 25px;
+  margin-right: 5px;
   position: relative;
+}
+
+.pagination-list:last-child {
+  margin-right: -12px;
 }
 
 .pagination-list a {
@@ -1616,17 +1631,10 @@ li:hover .btn {
   background-color: #ffffff;
 }
 
-.pagination-list .pagination-forward:hover,
-.pagination-list .pagination-back:hover {
-  background-color: transparent;
-}
-
 .pagination-list .pagination-current {
   background-color: #ffffff;
   color: #323232;
 }
-
-
 
 .pagination-list .pagination-back::before,
 .pagination-list .pagination-back::after,
@@ -1634,33 +1642,36 @@ li:hover .btn {
 .pagination-list .pagination-forward::after {
   content: "";
   position: absolute;
-  width: 2px;
-  height: 10px;
-  margin-top: 8px;
+  width: 1px;
+  height: 8px;
+  margin-top: 10px;
   background-color: #ffffff;
+}
+
+.pagination-list .pagination-back::before,
+.pagination-list .pagination-back::after,
+.pagination-list .pagination-forward::before,
+.pagination-list .pagination-forward::after {
+  left: 12px;
 }
 
 .pagination-list .pagination-back::before {
   top: -3px;
-  left: 2px;
   transform: rotate(45deg);
 }
 
 .pagination-list .pagination-back::after {
   top: 3px;
-  left: 2px;
   transform: rotate(-45deg);
 }
 
 .pagination-list .pagination-forward::before {
   top: 3px;
-  left: 2px;
   transform: rotate(45deg);
 }
 
 .pagination-list .pagination-forward::after {
   top: -3px;
-  left: 2px;
   transform: rotate(-45deg);
 }
 .pagination-list .disabled.pagination-back::before,
