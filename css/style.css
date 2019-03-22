@@ -1802,9 +1802,6 @@ li:hover .btn {
   animation: bounce 0.6s;
 }
 
-.modal-error {
-  animation: shake 0.6s;
-}
 
 .pop-up-overlay {
   position: fixed;
@@ -1821,9 +1818,11 @@ li:hover .btn {
   height: 440px;
   position: fixed;
   padding: 25px;
-  top: 30%;
-  left: 460px;
-  transform: translateX(-240px),translateY(500px);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   background-color: #f8f7f4;
   border-radius: 10px;
   z-index: 10;
@@ -1974,3 +1973,9 @@ li:hover .btn {
     transform: translateX(10px);
   }
 }
+
+.modal-error {
+  animation-name: snake;
+  animation-duration:  0.6s;
+}
+

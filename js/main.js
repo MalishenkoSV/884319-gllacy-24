@@ -34,12 +34,12 @@ close.addEventListener("click", function (evt) {
   overlay.classList.remove("pop-up-overlay");
 });
 
-form.addEventListener("submit", function () {
+form.addEventListener("submit", function (evt) {
   if (!login.value || !password.value) {
     evt.preventDefault();
-    popup.classList.remove("modal-error");
-    popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.removeS("modal-error");
 
   } else {
     if (isStorageSupport) {
