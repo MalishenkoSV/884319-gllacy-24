@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -53,9 +53,9 @@
                 <div class="input-pop-up form-nav">
                   <form class="form-order"  action="https://echo.htmlacademy.ru" method="post">
                     <label class="visually-hidden" for="e-mail"> Электронная почта</label>
-                    <input type="text" id="e-mail" name="e-mail" placeholder="Электронная почта">
+                    <input class="input" type="text" id="e-mail" name="e-mail" placeholder="Электронная почта">
                     <label class="visually-hidden" for="password"> Пароль пользователя</label>
-                    <input type="password" name="password-user" id="password" placeholder="Пароль">
+                    <input class="input" type="password" name="password-user" id="password" placeholder="Пароль">
                     <div class="order">
                       <button class="btn btn-input" type="submit">Войти</button>
                       <div class="links">
@@ -178,9 +178,9 @@
             <section class="form-mailing">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
               <div>
-                <form class="mailing">
+                <form class="mailing" method="post" action="https://echo.htmlacademy.ru">
                   <label class="visually-hidden" for="mailing">Электронная почта</label>
-                  <input  class="mailing-text" type="text" id="mailing" placeholder="  Электронная почта">
+                  <input  class="input mailing-text" type="text" id="mailing" placeholder="Электронная почта">
                   <button class="btn btn-submit-mailing" type="submit">Отправить</button>
                 </form>
               </div>
@@ -246,11 +246,11 @@
           <button type="button" class="feedback-btn" aria-label="Закрытие окно обратной связи"></button>
           <label class="visually-hidden" for="name">Имя пользователя</label>
           <p>Мы обязательно вам ответим!</p>
-          <input type="text" name="name-user" id="name" placeholder="Как Вас зовут?">
+          <input class="input" type="text" name="name-user" id="name" placeholder="Как Вас зовут?">
           <label class="visually-hidden" for="mail-feedback"> Электронная почта клиента</label>
-          <input type="text" name="e-mail" id="mail-feedback" placeholder="Ваша почта для ответа?">
+          <input class="input" type="text" name="e-mail" id="mail-feedback" placeholder="Ваша почта для ответа?">
           <label class="visually-hidden" for="comment-field"> Ваши коментарии</label>
-          <textarea name="comment" id="comment-field" rows="10" placeholder="Напишите что-нибудь...">
+          <textarea class="comment" name="comment" id="comment-field" rows="10" placeholder="Напишите что-нибудь...">
           </textarea>
           <button  class="btn btn-pop-up" type="submit">Отправить</button>
         </form>

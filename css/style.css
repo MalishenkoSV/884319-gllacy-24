@@ -215,6 +215,7 @@ input[type="radio"].visually-hidden {
   color: #ffbc9e;
   -webkit-text-decoration-color: #f9cdc4;
           text-decoration-color: #f9cdc4;
+
 }
 
 /*Кнопки*/
@@ -509,18 +510,30 @@ margin-top: 20px;
   z-index: 1;
 }
 
-input[type=text]:hover,
-input[type=email]:hover,
-input[type=password]:hover {
-  border: 1px solid #c7c6c5;
-  -webkit-box-shadow: inset 1px 1px 1px 1px #c7c6c5;
-          box-shadow: inset 1px 1px 1px 1px #c7c6c5;
+.input[type=text],
+.input[type=email],
+.input[type=password],
+.comment {
+  border: 1px solid #d3d3d2;
 }
 
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=password]:focus {
+.input[type=text]:hover,
+.input[type=email]:hover,
+.input[type=password]:hover,
+.comment:hover {
+  border: 1px solid #c7c6c5;
+  -webkit-box-shadow: inset 1px 1px 0px 0px #c7c6c5, inset -1px -1px 0px 0px #c7c6c5;
+          box-shadow: inset 1px 1px 0px 0px #c7c6c5, inset -1px -1px 0px 0px #c7c6c5;
+}
+
+.input[type=text]:focus,
+.input[type=email]:focus,
+.input[type=password]:focus,
+.comment:focus {
   border: 1px solid #8fbdec;
+  -webkit-box-shadow: inset 1px 1px 0px 0px #8fbdec, inset -1px -1px 0px 0px #8fbdec;
+  box-shadow: inset 1px 1px 0px 0px #8fbdec, inset -1px -1px 0px 0px #8fbdec;
+  outline: none;
 }
 
 .change-color {
@@ -722,7 +735,7 @@ background-color: #d07058;
   color: #323232;
   border-radius: 5px;
   position: absolute;
-  top: 50px;
+  top: 35px;
   left: -410px;
   -webkit-box-shadow: 2px 20px 20px #5c6961;
           box-shadow: 2px 20px 20px #5c6961;
@@ -1057,21 +1070,34 @@ visibility: hidden;
 
 }
 
-.breadcrumbs-list a,
-.breadcrumbs-list span {
-  margin-right: 10px;
+.breadcrumbs-list a {
+  margin: 0 5px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   color: #ffffff;
-  margin:  3px;
+  text-decoration-color: rgba(174, 190, 181, 0.2);
+}
+
+.icon-one,
+.icon-two {
+  position: relative;
+  padding: 5px;
+}
+
+.icon-one::before,
+.icon-two::before {
+  content: "»";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .breadcrumbs-list .main {
   margin-left: 0;
 }
-
-
 /*блок хитов*/
 
 .ice-kind {
@@ -1089,6 +1115,10 @@ visibility: hidden;
           justify-content: space-between;
   margin: 0;
   margin-bottom: 95px;
+}
+
+.ice a{
+  z-index: 10;
 }
 
 .ice-card-item {
@@ -1226,7 +1256,7 @@ visibility: hidden;
   text-align: center;
   padding: 0;
   margin: 0;
-  z-index: 1;
+  z-index: 200;
 }
 
 /*Фильтр*/
@@ -1620,7 +1650,6 @@ li:hover .btn {
   margin-left: 25px;
   height: 45px;
   width: 370px;
-
   border-radius: 5px;
 }
 
@@ -1638,12 +1667,6 @@ li:hover .btn {
   padding-left: 5px;
 }
 
-.mailing-text::-ms-input-placeholder {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  padding-left: 5px;
-}
 
 .mailing-text::placeholder {
   font-size: 16px;
@@ -1881,6 +1904,7 @@ li:hover .btn {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+
 .pagination-list .disabled.pagination-back::before,
 .pagination-list .disabled.pagination-back::after {
   background-color: rgba(255, 255, 255, 0.2);
@@ -2053,12 +2077,13 @@ li:hover .btn {
 
 .feedback p {
   margin: 0;
+  padding: 0;
+  margin-top: -10px;
   margin-bottom: 20px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
   color: #323232;
-
 }
 
 .feedback-form {
@@ -2078,6 +2103,7 @@ li:hover .btn {
   margin-bottom: 20px;
   padding-left: 10px;
   border-radius: 5px;
+  border:0;
 }
 
 .feedback textarea {
@@ -2088,20 +2114,16 @@ li:hover .btn {
   margin-top: 0;
 }
 
-.feedback textarea:hover {
-  -webkit-box-shadow: inset 1px 1px 1px 1px #c7c6c5;
-          box-shadow: inset 1px 1px 1px 1px #c7c6c5;
-}
-
 .feedback .feedback-btn {
   width: 22px;
   height: 22px;
-  margin-top: -15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
   border: 0;
   background-color: transparent;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  position: relative;
 }
 
 .feedback-btn::before,
@@ -2160,7 +2182,7 @@ li:hover .btn {
           transform: rotate(-45deg);
 }
 
-.btn-pop-up {
+.feedback-form .btn-pop-up {
   width: 140px;
   height: 45px;
   font-size: 18px;
@@ -2168,9 +2190,10 @@ li:hover .btn {
   font-weight: 700;
   margin-top: 25px;
   border: 0;
+  padding: 10px 25px;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding: 15px 25px;
+
 }
 
 /*Анимация*/

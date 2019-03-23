@@ -3,7 +3,7 @@ var link = document.querySelector(".btn-contacts");
 var popup = document.querySelector(".feedback");
 var close = popup.querySelector(".feedback-btn");
 var login = popup.querySelector("[name=name-user]");
-var password = popup.querySelector("[name=mail-feedback]");
+var password = popup.querySelector("[name=e-mail]");
 var overlay = document.querySelector(".overlay")
 var form = popup.querySelector(".feedback-form");
 var isStorageSupport = true;
