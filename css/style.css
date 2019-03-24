@@ -125,6 +125,7 @@ input[type="radio"].visually-hidden {
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
+  flex-wrap: wrap;
 }
 
 .user-navigation {
@@ -299,13 +300,12 @@ input[type="radio"].visually-hidden {
   width: 200px;
   height: 45px;
   border: 0;
+  margin-top: 20px;
+  margin-left: 27px;
   padding: 10px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  position: absolute;
-  top: 330px;
-  left: 30px;
   z-index: 10;
 }
 
@@ -424,7 +424,7 @@ margin-top: 20px;
   font-weight: 500;
   width: 140px;
   height: 35px;
-  margin-top: 22px;
+  margin-top: 25px;
   margin-left: 13px;
   margin-bottom: 20px;
   padding: 5px 15px;
@@ -583,13 +583,6 @@ margin-top: 20px;
 }
 
 .input-search input:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-  padding-left: 10px;
-}
-
-.input-search input::-ms-input-placeholder {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -903,8 +896,19 @@ visibility: hidden;
 
 .slider-list {
   margin: 0;
-  margin-top: 23px;
   padding: 0;
+}
+
+.slide-title {
+  /* display: block; */
+  margin: 0px auto;
+  margin-top: -128px;
+  margin-bottom: 30px;
+  width: 675px;
+  font-size: 60px;
+  line-height: 60.35px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .slider-controls label {
@@ -972,16 +976,6 @@ visibility: hidden;
   background-image:  url("../img/ice-cream 3.png");
 }
 
-.slide-title {
-  position: absolute;
-  bottom: 75px;
-  left: 222px;
-  font-size: 60px;
-  line-height: 60.35px;
-  font-weight: 700;
-  width: 700px;
-}
-
 
 /*Блок акции*/
 .raspberry p,
@@ -1033,21 +1027,21 @@ visibility: hidden;
 .raspberry {
   margin-right: 25px;
   width: 560px;
-  height: 230px;
+  min-height: 230px;
   background-color: #c13f61;
   background-image: url("../img/raspberry.png");
+
   background-repeat: no-repeat;
 }
 
 .raspberry .btn{
   width: 165px;
   margin-top: 45px;
-
 }
 
 .chocolate {
   width: 560px;
-  height: 230px;
+  min-height: 230px;
   background-color: #723e1b;
   background-image: url("../img/chocolate.png");
   background-repeat: no-repeat;
@@ -1112,23 +1106,16 @@ visibility: hidden;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0;
-  margin-bottom: 95px;
 }
 
-.ice a{
+.ice-card-item .card-item:last-child {
+  margin: 0;
+  margin-right: auto;
+}
+
+.ice a {
   z-index: 10;
-}
-
-.ice-card-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
 }
 
 .card-item-hit::before {
@@ -1155,22 +1142,24 @@ visibility: hidden;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  justify-content: space-between;
   padding: 0;
+  margin-bottom: -28px;
+  margin-right: 20px;
 }
 
-.ice-card-item .card-item {
-  margin-bottom: 95px;
+.ice .card-item:nth-child(4n) {
+ margin-right: 0;
 }
-
 
 .card-item::after {
   content: "";
   position: absolute;
-  top: -4%;
+  top: -2%;
   left: -5%;
   z-index: 1;
   width: 285px;
-  min-height: 405px;
+  height: 105%;
   border-radius: 5px;
   opacity: 0;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -1217,25 +1206,26 @@ visibility: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card-item a {
- width: 250px;
+ min-width: 250px;
  padding:  0;
+ margin-top: 14px;
  font-size: 16px;
  line-height: 22px;
  text-align: center;
- position: absolute;
- top: 275px;
- left: 10px;
  color:#ffffff;
  text-decoration: underline;
  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
          text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.ice-card-item .card-item:nth-child(4n+1) a {
+  margin-left: 10px;
 }
 
 .card-item a:hover,
@@ -1281,7 +1271,7 @@ visibility: hidden;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -1305,7 +1295,8 @@ visibility: hidden;
 
 .filter-form-wrapper-checkbox {
   width: 705px;
-  padding: 10px;
+  margin: 8px 0;
+  padding: 6px 10px;
 }
 
 .filter-form-label {
@@ -1321,6 +1312,11 @@ visibility: hidden;
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.filter-form-input:focus +.filter-form-label {
+  display: inline-block;
+  color: #5b9ddf;
 }
 
 .filter-form-label-radio::before {
@@ -1368,7 +1364,7 @@ visibility: hidden;
 }
 
 .filter-form-label-radio {
-  margin:  0 7px;
+  margin:  0 8px;
   padding-left: 30px;
 }
 
@@ -1391,7 +1387,7 @@ visibility: hidden;
   width: 27px;
   height: 25px;
   background-image: url("../img/checkbox-on.svg");
-  background-position: 0 5px;
+  background-position: -1px 4px;
   background-repeat: no-repeat;
   opacity: 0;
   background-size: contain;
@@ -1610,7 +1606,7 @@ li:hover .btn {
 }
 
 .news {
-  height: 220px;
+  min-height: 220px;
   width: 560px;
   margin-right: 25px;
   padding-left: 20px;
@@ -1632,7 +1628,7 @@ li:hover .btn {
 }
 
 .form-mailing {
-  height: 220px;
+  min-height: 220px;
   width: 560px;
   background-color: #f8f7f4;
   color: #5a5a5a;
@@ -1650,21 +1646,21 @@ li:hover .btn {
   margin-left: 25px;
   height: 45px;
   width: 370px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .mailing-text::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 .mailing-text:-ms-input-placeholder {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 
@@ -1672,16 +1668,16 @@ li:hover .btn {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 .form-mailing p {
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  width: 510px;
-  height: 60px;
-  margin: 35px 25px;
+  min-width: 510px;
+  min-height: 60px;
+  margin: 32px 25px;
   padding: 0;
 }
 
@@ -1801,7 +1797,7 @@ li:hover .btn {
 
 .pagination-list {
   margin: 0;
-  margin-top: 7px;
+  /* margin-top: 7px; */
   padding: 0;
   padding-top: 40px;
   padding-bottom: 30px;
@@ -2064,12 +2060,8 @@ li:hover .btn {
   height: 440px;
   position: fixed;
   padding: 25px;
-  /* margin: -150px -150px; */
-  top: 30%;
-  left: 460px;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+  top: calc(50% - 240px);
+  left: calc(50% - 240px);
   background-color: #f8f7f4;
   border-radius: 10px;
   z-index: 200;
